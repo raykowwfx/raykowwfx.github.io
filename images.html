@@ -109,27 +109,32 @@
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
+            gap: 20px; /* Adds spacing between images */
         }
 
         .image {
             display: flex;
             flex-direction: column; /* Stack children vertically */
             justify-content: space-between; /* Ensure space between content and button */
-            margin: 20px;
             background-color: #1a1a1a;
-            padding: 20px;
+            padding: 15px;
             border-radius: 10px;
             box-shadow: 0 0 20px rgba(143, 92, 244, 0.8);
             transition: transform 0.3s, box-shadow 0.3s;
-            max-width: 300px; /* Constrain the size of the image container */
+            max-width: 200px; /* Default size for the image container */
             width: 100%;
             box-sizing: border-box;
-            height: 400px; /* Set a fixed height to maintain consistency */
+            height: 300px; /* Adjust height for consistency */
+        }
+
+        .image.small-image {
+            max-width: 150px; /* Smaller size for the "Palm" image container */
+            height: 225px; /* Adjust height to match smaller width */
         }
 
         .image:hover {
             transform: scale(1.05);
-            box-shadow: 0 0 40px rgba(143, 92, 244, 1);
+            box-shadow: 0 0 30px rgba(143, 92, 244, 1);
         }
 
         .image img {
@@ -137,29 +142,28 @@
             height: auto; /* Maintain aspect ratio */
             border-radius: 10px;
             display: block;
-            margin-bottom: 15px;
+            margin-bottom: 10px; /* Reduced margin for smaller images */
         }
 
         .image p {
-            margin-bottom: 15px;
-            font-size: 18px;
+            margin-bottom: 10px; /* Reduced margin for smaller images */
+            font-size: 16px; /* Adjusted font size */
         }
 
         .image a {
             display: inline-block;
             text-decoration: none;
             color: #8f5cf4;
-            font-size: 16px;
+            font-size: 14px; /* Adjusted font size */
             transition: color 0.3s;
             background-color: #1a1a1a;
             border: 2px solid #8f5cf4;
-            padding: 10px 20px;
+            padding: 8px 15px; /* Adjusted padding */
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(143, 92, 244, 0.8); /* Glow effect */
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-top: auto; /* Push the button to the bottom */
         }
 
         .image a:hover {
@@ -235,7 +239,28 @@
                     <i class="fa fa-download"></i> Download
                 </a>
             </div>
-            <!-- Add more images here -->
+            <!-- New Images -->
+            <div class="image small-image">
+                <img src="images/Palm.png" alt="Palm"> <!-- Replace with your image -->
+                <p>Palm</p>
+                <a href="https://drive.google.com/file/d/YOUR_FILE_ID/view" download>
+                    <i class="fa fa-download"></i> Download
+                </a>
+            </div>
+            <div class="image">
+                <img src="images/Sanic.png" alt="Sanic"> <!-- Replace with your image -->
+                <p>Sanic</p>
+                <a href="https://drive.google.com/file/d/YOUR_FILE_ID/view" download>
+                    <i class="fa fa-download"></i> Download
+                </a>
+            </div>
+            <div class="image">
+                <img src="images/Registration Plate.jpg" alt="Registration Plate"> <!-- Replace with your image -->
+                <p>Registration Plate</p>
+                <a href="https://drive.google.com/file/d/YOUR_FILE_ID/view" download>
+                    <i class="fa fa-download"></i> Download
+                </a>
+            </div>
         </div>
     </section>
 
