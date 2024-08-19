@@ -421,92 +421,27 @@
                     <i class="fa fa-download"></i> Download
                 </a>
             </div>
-            <!-- Shockwave 16 -->
-            <div class="shockwave">
-                <video class="shockwave-video" src="videos/Shockwave_16.mp4" muted></video>
-                <div class="shockwave-text">Preview</div>
-                <a class="download-button" href="downloads/Shockwave_16.zip" download>
-                    <i class="fa fa-download"></i> Download
-                </a>
-            </div>
-            <!-- Shockwave 17 -->
-            <div class="shockwave">
-                <video class="shockwave-video" src="videos/Shockwave_17.mp4" muted></video>
-                <div class="shockwave-text">Preview</div>
-                <a class="download-button" href="downloads/Shockwave_17.zip" download>
-                    <i class="fa fa-download"></i> Download
-                </a>
-            </div>
-            <!-- Shockwave 18 -->
-            <div class="shockwave">
-                <video class="shockwave-video" src="videos/Shockwave_18.mp4" muted></video>
-                <div class="shockwave-text">Preview</div>
-                <a class="download-button" href="downloads/Shockwave_18.zip" download>
-                    <i class="fa fa-download"></i> Download
-                </a>
-            </div>
-            <!-- Shockwave 19 -->
-            <div class="shockwave">
-                <video class="shockwave-video" src="videos/Shockwave_19.mp4" muted></video>
-                <div class="shockwave-text">Preview</div>
-                <a class="download-button" href="downloads/Shockwave_19.zip" download>
-                    <i class="fa fa-download"></i> Download
-                </a>
-            </div>
-            <!-- Shockwave 20 -->
-            <div class="shockwave">
-                <video class="shockwave-video" src="videos/Shockwave_20.mp4" muted></video>
-                <div class="shockwave-text">Preview</div>
-                <a class="download-button" href="downloads/Shockwave_20.zip" download>
-                    <i class="fa fa-download"></i> Download
-                </a>
-            </div>
-            <!-- Shockwave 21 -->
-            <div class="shockwave">
-                <video class="shockwave-video" src="videos/Shockwave_21.mp4" muted></video>
-                <div class="shockwave-text">Preview</div>
-                <a class="download-button" href="downloads/Shockwave_21.zip" download>
-                    <i class="fa fa-download"></i> Download
-                </a>
-            </div>
-            <!-- Shockwave 22 -->
-            <div class="shockwave">
-                <video class="shockwave-video" src="videos/Shockwave_22.mp4" muted></video>
-                <div class="shockwave-text">Preview</div>
-                <a class="download-button" href="downloads/Shockwave_22.zip" download>
-                    <i class="fa fa-download"></i> Download
-                </a>
-            </div>
-            <!-- Shockwave 23 -->
-            <div class="shockwave">
-                <video class="shockwave-video" src="videos/Shockwave_23.mp4" muted></video>
-                <div class="shockwave-text">Preview</div>
-                <a class="download-button" href="downloads/Shockwave_23.zip" download>
-                    <i class="fa fa-download"></i> Download
-                </a>
-            </div>
-            <!-- Shockwave 24 -->
-            <div class="shockwave">
-                <video class="shockwave-video" src="videos/Shockwave_24.mp4" muted></video>
-                <div class="shockwave-text">Preview</div>
-                <a class="download-button" href="downloads/Shockwave_24.zip" download>
-                    <i class="fa fa-download"></i> Download
-                </a>
-            </div>
-            <!-- Shockwave 25 -->
-            <div class="shockwave">
-                <video class="shockwave-video" src="videos/Shockwave_25.mp4" muted></video>
-                <div class="shockwave-text">Preview</div>
-                <a class="download-button" href="downloads/Shockwave_25.zip" download>
-                    <i class="fa fa-download"></i> Download
-                </a>
-            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Raykoww FX. All rights reserved.</p>
+    <footer id="contact">
+        <p>© 2024 All rights reserved. Raykoww FX</p>
     </footer>
+
+    <script>
+        document.querySelectorAll('.shockwave').forEach(shockwave => {
+            const video = shockwave.querySelector('.shockwave-video');
+
+            shockwave.addEventListener('mouseover', () => {
+                video.play();
+            });
+
+            shockwave.addEventListener('mouseout', () => {
+                video.pause();
+                video.currentTime = 0; // Reset video to start
+            });
+        });
+    </script>
 </body>
 </html>
