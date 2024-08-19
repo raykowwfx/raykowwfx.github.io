@@ -111,12 +111,19 @@
         }
 
         .image {
+            display: flex;
+            flex-direction: column; /* Stack children vertically */
+            justify-content: space-between; /* Ensure space between content and button */
             margin: 20px;
             background-color: #1a1a1a;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 20px rgba(143, 92, 244, 0.8);
             transition: transform 0.3s, box-shadow 0.3s;
+            max-width: 300px; /* Constrain the size of the image container */
+            width: 100%;
+            box-sizing: border-box;
+            height: 400px; /* Set a fixed height to maintain consistency */
         }
 
         .image:hover {
@@ -125,8 +132,10 @@
         }
 
         .image img {
-            width: 100%;
+            width: 100%; /* Ensure image takes up the container width */
+            height: auto; /* Maintain aspect ratio */
             border-radius: 10px;
+            display: block;
             margin-bottom: 15px;
         }
 
@@ -149,6 +158,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            margin-top: auto; /* Push the button to the bottom */
         }
 
         .image a:hover {
@@ -204,23 +214,23 @@
         <h2>Featured Images</h2>
         <div class="image-container">
             <div class="image">
-                <img src="images/image1.jpg" alt="Image 1"> <!-- Replace with your image -->
-                <p>Stunning Landscape</p>
-                <a href="downloads/image1.jpg" download>
+                <img src="images/CAR FRAME.png" alt="Car Frame"> <!-- Replace with your image -->
+                <p>Car Frame</p>
+                <a href="https://drive.google.com/file/d/13FoD4jv2G3s2NhV0Ccs9J64r0Jcq5GTP/view" download>
                     <i class="fa fa-download"></i> Download
                 </a>
             </div>
             <div class="image">
-                <img src="images/image2.jpg" alt="Image 2"> <!-- Replace with your image -->
-                <p>Abstract Art</p>
-                <a href="downloads/image2.jpg" download>
+                <img src="images/Moon.png" alt="Moon"> <!-- Replace with your image -->
+                <p>Moon</p>
+                <a href="https://drive.google.com/file/d/1jGeDXsMwhAojYZ_bgaKVi_fNxEO_n7_C/view?usp=drive_link" download>
                     <i class="fa fa-download"></i> Download
                 </a>
             </div>
             <div class="image">
-                <img src="images/image3.jpg" alt="Image 3"> <!-- Replace with your image -->
-                <p>City Skyline</p>
-                <a href="downloads/image3.jpg" download>
+                <img src="images/Sega-logo.png" alt="SEGA Logo"> <!-- Replace with your image -->
+                <p>SEGA Logo</p>
+                <a href="https://drive.google.com/file/d/1IdnXeS57KbVBm4-045FqfwMFB8rXzr9u/view?usp=drive_link" download>
                     <i class="fa fa-download"></i> Download
                 </a>
             </div>
