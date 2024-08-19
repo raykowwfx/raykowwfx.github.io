@@ -40,36 +40,57 @@
         }
 
         /* Navigation Bar */
-        nav {
-            background-color: #2b2b2b;
-            padding: 15px 0;
-        }
+nav {
+    background-color: #2b2b2b; /* Dark background for the nav */
+    padding: 15px 0; /* Padding for vertical spacing */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+}
 
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
+nav ul {
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    text-align: center; /* Center align the list items */
+}
 
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
+nav ul li {
+    display: inline; /* Display list items inline */
+    margin: 0 20px; /* Horizontal spacing between items */
+}
 
-        nav ul li a {
-            text-decoration: none;
-            color: #fff;
-            font-size: 18px;
-            transition: color 0.3s;
-        }
+nav ul li a {
+    text-decoration: none; /* Remove underline from links */
+    color: #fff; /* White color for text */
+    font-size: 18px; /* Font size for links */
+    font-weight: bold; /* Bold font weight */
+    position: relative; /* For positioning pseudo-elements */
+    transition: color 0.3s; /* Smooth color transition on hover */
+}
 
-        nav ul li a.active {
-            color: #8f5cf4;
-        }
+nav ul li a.active {
+    color: #8f5cf4; /* Active link color */
+}
 
-        nav ul li a:hover {
-            color: #8f5cf4;
-        }
+nav ul li a:hover {
+    color: #8f5cf4; /* Hover color */
+}
+
+nav ul li a::after {
+    content: '';
+    display: block;
+    height: 3px; /* Thickness of the underline */
+    background: #8f5cf4; /* Color of the underline */
+    position: absolute; /* Absolute positioning */
+    left: 0; /* Align to the left of the link */
+    bottom: -5px; /* Position below the text */
+    width: 0; /* Start with zero width */
+    transition: width 0.3s; /* Smooth width transition */
+}
+
+nav ul li a:hover::after {
+    width: 100%; /* Full width on hover */
+}
+
 
         /* Hero Section */
         .hero {

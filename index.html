@@ -12,7 +12,7 @@
             margin: 0;
             padding: 0;
             font-family: 'Arial', sans-serif;
-            background-color: #0e0e0e;
+            background-color: #121212;
             color: #fff;
             text-align: center;
             scrollbar-color: #8f5cf4 #1a1a1a; /* Firefox */
@@ -21,7 +21,7 @@
 
         /* Scrollbar Styles for WebKit Browsers (Chrome, Safari) */
         ::-webkit-scrollbar {
-            width: 8px; /* Width of the scrollbar */
+            width: 10px; /* Width of the scrollbar */
         }
 
         ::-webkit-scrollbar-track {
@@ -30,8 +30,8 @@
 
         ::-webkit-scrollbar-thumb {
             background: #8f5cf4; /* Color of the scrollbar thumb */
-            border-radius: 10px; /* Rounded corners of the scrollbar thumb */
-            box-shadow: 0 0 10px rgba(143, 92, 244, 0.8); /* Glow effect */
+            border-radius: 5px; /* Rounded corners of the scrollbar thumb */
+            box-shadow: 0 0 12px rgba(143, 92, 244, 0.7); /* Glow effect */
             transition: background 0.3s, box-shadow 0.3s;
         }
 
@@ -44,6 +44,7 @@
         nav {
             background-color: #2b2b2b;
             padding: 15px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
         }
 
         nav ul {
@@ -54,13 +55,15 @@
 
         nav ul li {
             display: inline;
-            margin: 0 15px;
+            margin: 0 20px;
         }
 
         nav ul li a {
             text-decoration: none;
             color: #fff;
             font-size: 18px;
+            font-weight: bold;
+            position: relative;
             transition: color 0.3s;
         }
 
@@ -72,6 +75,22 @@
             color: #8f5cf4;
         }
 
+        nav ul li a::after {
+            content: '';
+            display: block;
+            height: 3px;
+            background: #8f5cf4;
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 0;
+            transition: width 0.3s;
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
         /* Hero Section */
         .hero {
             padding: 100px 20px;
@@ -79,12 +98,14 @@
             background-image: url('images/images-bg.jpg'); /* Replace with a relevant background image */
             background-size: cover;
             background-position: center;
+            position: relative;
+            overflow: hidden;
         }
 
         .hero h1 {
             font-size: 50px;
             color: #8f5cf4;
-            text-shadow: 2px 2px 10px rgba(143, 92, 244, 0.8);
+            text-shadow: 0 0 15px rgba(143, 92, 244, 0.8);
             animation: fadeIn 2s ease-in-out;
         }
 
@@ -94,59 +115,36 @@
             margin-top: 20px;
         }
 
-        .hero a {
-            display: inline-block;
-            text-decoration: none;
-            color: #fff;
-            background-color: #8f5cf4;
-            padding: 15px 30px;
-            margin-top: 30px;
+        .hero .free-info {
             font-size: 18px;
+            color: #fff;
+            background: #8f5cf4;
+            padding: 10px 20px;
             border-radius: 5px;
-            box-shadow: 0 0 20px rgba(143, 92, 244, 0.8);
-            transition: background-color 0.3s, box-shadow 0.3s;
+            display: inline-block;
+            margin-top: 20px;
+            font-weight: bold;
+            box-shadow: 0 0 8px rgba(143, 92, 244, 0.7);
         }
 
-        .hero a:hover {
-            background-color: #7e4dcf;
-            box-shadow: 0 0 40px rgba(143, 92, 244, 1);
-        }
-
-        /* Services Section */
-        .services {
+        /* Why to Use Section */
+        .why-use {
             padding: 50px 20px;
             background-color: #252525;
         }
 
-        .services h2 {
+        .why-use h2 {
             font-size: 36px;
             color: #8f5cf4;
             margin-bottom: 30px;
+            text-shadow: 0 0 10px rgba(143, 92, 244, 0.5);
         }
 
-        .service {
-            margin: 20px;
-            background-color: #1a1a1a;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(143, 92, 244, 0.8);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .service:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 40px rgba(143, 92, 244, 1);
-        }
-
-        .service h3 {
-            font-size: 24px;
-            color: #8f5cf4;
-            margin-bottom: 15px;
-        }
-
-        .service p {
-            color: #ddd;
+        .why-use p {
             font-size: 18px;
+            color: #ddd;
+            line-height: 1.6;
+            margin-bottom: 20px;
         }
 
         /* Footer */
@@ -156,6 +154,7 @@
             margin-top: 50px;
             color: #8f8f8f;
             font-size: 14px;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
         }
 
         /* Animations */
@@ -188,7 +187,13 @@
     <section id="home" class="hero">
         <h1>Welcome to Raykoww FX</h1>
         <p>Experience the best FX, VFX, and smooth designs!</p>
-        <a href="#services">Get Started</a>
+        <div class="free-info">100% Free</div>
+    </section>
+
+    <!-- Why to Use Section -->
+    <section class="why-use">
+        <h2>Why To Use Raykoww FX?</h2>
+        <p>Instead of wasting time searching everywhere for the perfect effects, overlays, and sound FX, Raykoww FX provides all you need in one place. Our resources are meticulously curated to ensure top quality, making your creative projects easier and more efficient. Enjoy hassle-free access to high-quality assets and save valuable time with Raykoww FX.</p>
     </section>
 
     <!-- Footer -->
