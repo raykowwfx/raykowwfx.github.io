@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Green Screen - Raykoww FX</title>
+    <!-- Favicon -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <style>
         /* General Styles */
@@ -40,63 +41,62 @@
         }
 
         /* Navigation Bar */
-nav {
-    background-color: #2b2b2b; /* Dark background for the nav */
-    padding: 15px 0; /* Padding for vertical spacing */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
-}
+        nav {
+            background-color: #2b2b2b; /* Dark background for the nav */
+            padding: 15px 0; /* Padding for vertical spacing */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+        }
 
-nav ul {
-    list-style: none; /* Remove default list styling */
-    padding: 0; /* Remove padding */
-    margin: 0; /* Remove margin */
-    text-align: center; /* Center align the list items */
-}
+        nav ul {
+            list-style: none; /* Remove default list styling */
+            padding: 0; /* Remove padding */
+            margin: 0; /* Remove margin */
+            text-align: center; /* Center align the list items */
+        }
 
-nav ul li {
-    display: inline; /* Display list items inline */
-    margin: 0 20px; /* Horizontal spacing between items */
-}
+        nav ul li {
+            display: inline; /* Display list items inline */
+            margin: 0 20px; /* Horizontal spacing between items */
+        }
 
-nav ul li a {
-    text-decoration: none; /* Remove underline from links */
-    color: #fff; /* White color for text */
-    font-size: 18px; /* Font size for links */
-    font-weight: bold; /* Bold font weight */
-    position: relative; /* For positioning pseudo-elements */
-    transition: color 0.3s; /* Smooth color transition on hover */
-}
+        nav ul li a {
+            text-decoration: none; /* Remove underline from links */
+            color: #fff; /* White color for text */
+            font-size: 18px; /* Font size for links */
+            font-weight: bold; /* Bold font weight */
+            position: relative; /* For positioning pseudo-elements */
+            transition: color 0.3s; /* Smooth color transition on hover */
+        }
 
-nav ul li a.active {
-    color: #8f5cf4; /* Active link color */
-}
+        nav ul li a.active {
+            color: #8f5cf4; /* Active link color */
+        }
 
-nav ul li a:hover {
-    color: #8f5cf4; /* Hover color */
-}
+        nav ul li a:hover {
+            color: #8f5cf4; /* Hover color */
+        }
 
-nav ul li a::after {
-    content: '';
-    display: block;
-    height: 3px; /* Thickness of the underline */
-    background: #8f5cf4; /* Color of the underline */
-    position: absolute; /* Absolute positioning */
-    left: 0; /* Align to the left of the link */
-    bottom: -5px; /* Position below the text */
-    width: 0; /* Start with zero width */
-    transition: width 0.3s; /* Smooth width transition */
-}
+        nav ul li a::after {
+            content: '';
+            display: block;
+            height: 3px; /* Thickness of the underline */
+            background: #8f5cf4; /* Color of the underline */
+            position: absolute; /* Absolute positioning */
+            left: 0; /* Align to the left of the link */
+            bottom: -5px; /* Position below the text */
+            width: 0; /* Start with zero width */
+            transition: width 0.3s; /* Smooth width transition */
+        }
 
-nav ul li a:hover::after {
-    width: 100%; /* Full width on hover */
-}
-
+        nav ul li a:hover::after {
+            width: 100%; /* Full width on hover */
+        }
 
         /* Hero Section */
         .hero {
             padding: 100px 20px;
             background-color: #1a1a1a;
-            background-image: url('images/green-screen-bg.jpg'); /* Replace with your background image */
+            background-image: url('images/hero-bg.jpg'); /* Replace with your background image */
             background-size: cover;
             background-position: center;
         }
@@ -185,6 +185,81 @@ nav ul li a:hover::after {
             margin-right: 8px; /* Space between icon and text */
         }
 
+        /* Explosion Section */
+        .Explosion-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .Explosion {
+            position: relative;
+            width: 300px; /* Increased width */
+            height: 300px; /* Increased height */
+            background-color: #000;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(143, 92, 244, 0.8);
+            transition: transform 0.3s;
+        }
+
+        .Explosion:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 40px rgba(143, 92, 244, 1);
+        }
+
+        .Explosion-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .Explosion-text {
+            position: absolute;
+            bottom: 80px; /* Increased space for button */
+            left: 50%;
+            transform: translateX(-50%);
+            color: #8f5cf4; /* Glowing purple text */
+            font-size: 28px; /* Larger font size */
+            background: rgba(0, 0, 0, 0.6);
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-shadow: 0 0 10px rgba(143, 92, 244, 0.8); /* Glowing effect */
+            transition: opacity 0.3s;
+        }
+
+        .Explosion:hover .Explosion-text {
+            opacity: 1;
+        }
+
+        .download-button {
+            position: absolute;
+            bottom: 10px; /* Position above the text */
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #8f5cf4;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            transition: background-color 0.3s, box-shadow 0.3s;
+            box-shadow: 0 0 10px rgba(143, 92, 244, 0.8); /* Glow effect */
+        }
+
+        .download-button:hover {
+            background-color: #7e4dcf;
+            box-shadow: 0 0 20px rgba(143, 92, 244, 1); /* Enhanced glow effect on hover */
+        }
+
+        .download-button .fa {
+            margin-right: 8px; /* Space between icon and text */
+        }
+
         /* Footer */
         footer {
             background-color: #2b2b2b;
@@ -199,6 +274,7 @@ nav ul li a:hover::after {
             from { opacity: 0; }
             to { opacity: 1; }
         }
+        
     </style>
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -217,43 +293,63 @@ nav ul li a:hover::after {
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section id="home" class="hero">
         <h1>Green Screen</h1>
         <p>Discover and download our green screen assets for your projects!</p>
     </section>
 
-    <!-- Green Screen Section -->
-    <section class="section-content">
-        <h2>Featured Green Screen Assets</h2>
-        <div class="green-screen-container">
-            <div class="green-screen">
-                <img src="images/greenscreen1.jpg" alt="Green Screen 1"> <!-- Replace with your image -->
-                <p>City Background</p>
-                <a href="downloads/greenscreen1.zip" download>
-                    <i class="fa fa-download"></i> Download
-                </a>
-            </div>
-            <div class="green-screen">
-                <img src="images/greenscreen2.jpg" alt="Green Screen 2"> <!-- Replace with your image -->
-                <p>Forest Background</p>
-                <a href="downloads/greenscreen2.zip" download>
-                    <i class="fa fa-download"></i> Download
-                </a>
-            </div>
-            <div class="green-screen">
-                <img src="images/greenscreen3.jpg" alt="Green Screen 3"> <!-- Replace with your image -->
-                <p>Space Background</p>
-                <a href="downloads/greenscreen3.zip" download>
-                    <i class="fa fa-download"></i> Download
-                </a>
-            </div>
-            <!-- Add more green screen assets here -->
+    <!-- Explosion Section -->
+<section id="explosions" class="section-content">
+    <h2>Explosion Effects</h2>
+    <div class="Explosion-container">
+        <!-- Explosion 1 -->
+        <div class="Explosion">
+            <video class="Explosion-video" src="green screen/boom1.mp4" muted></video>
+            <div class="Explosion-text">Preview</div>
+            <a class="download-button" href="https://drive.google.com/uc?export=download&id=1CTk_e6LorlgAgQ2bk-SAUK219YH7JkXM" download>
+                <i class="fa fa-download"></i> Download
+            </a>
         </div>
-    </section>
+
+        <!-- Explosion 2 -->
+        <div class="Explosion">
+            <video class="Explosion-video" src="green screen/boom1_purple.mp4" muted></video>
+            <div class="Explosion-text">Preview</div>
+            <a class="download-button" href="https://drive.google.com/uc?export=download&id=18wgMJ8lvv15XLmcNMVyDpsw-7CQsTmB-" download>
+                <i class="fa fa-download"></i> Download
+            </a>
+        </div>
+
+        <!-- Explosion 3 -->
+        <div class="Explosion">
+            <video class="Explosion-video" src="green screen/boom3.mp4" muted></video>
+            <div class="Explosion-text">Preview</div>
+            <a class="download-button" href="https://drive.google.com/uc?export=download&id=3ws4GxxjM3mcAu_NdyJDwv2DjOm7aztqq" download>
+                <i class="fa fa-download"></i> Download
+            </a>
+        </div>
+    </div>
+</section>
 
     <!-- Footer -->
     <footer>
-        <p>© 2024 All rights reserved. Raykoww FX</p>
+        <p>&copy; 2024 Raykoww FX. All rights reserved.</p>
     </footer>
+
+    <script>
+        document.querySelectorAll('.Explosion').forEach(Explosion => {
+            const video = Explosion.querySelector('.Explosion-video');
+
+            Explosion.addEventListener('mouseover', () => {
+                video.play();
+            });
+
+            Explosion.addEventListener('mouseout', () => {
+                video.pause();
+                video.currentTime = 0; // Reset video to start
+            });
+        });
+    </script>
+
 </body>
 </html>
