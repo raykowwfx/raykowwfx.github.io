@@ -4,12 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sound FX - Raykoww FX</title>
-    <!-- Favicon -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* General Styles */
         body {
             margin: 0;
             padding: 0;
@@ -17,123 +14,100 @@
             background-color: #0e0e0e;
             color: #fff;
             text-align: center;
-            scrollbar-color: #8f5cf4 #1a1a1a; /* Firefox */
-            scrollbar-width: thin; /* Firefox */
+            scrollbar-color: #8f5cf4 #1a1a1a;
+            scrollbar-width: thin;
         }
-    
-        /* Scrollbar Styles for WebKit Browsers (Chrome, Safari) */
         ::-webkit-scrollbar {
-            width: 8px; /* Width of the scrollbar */
+            width: 8px;
         }
-    
         ::-webkit-scrollbar-track {
-            background: #1a1a1a; /* Background color of the scrollbar track */
+            background: #1a1a1a;
         }
-    
         ::-webkit-scrollbar-thumb {
-            background: #8f5cf4; /* Color of the scrollbar thumb */
-            border-radius: 10px; /* Rounded corners of the scrollbar thumb */
-            box-shadow: 0 0 10px rgba(143, 92, 244, 0.8); /* Glow effect */
+            background: #8f5cf4;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(143, 92, 244, 0.8);
             transition: background 0.3s, box-shadow 0.3s;
         }
-    
         ::-webkit-scrollbar-thumb:hover {
-            background: #7e4dcf; /* Darker shade on hover */
-            box-shadow: 0 0 20px rgba(143, 92, 244, 1); /* Enhanced glow effect on hover */
+            background: #7e4dcf;
+            box-shadow: 0 0 20px rgba(143, 92, 244, 1);
         }
-    
-        /* Navigation Bar */
         nav {
-            background-color: #2b2b2b; /* Dark background for the nav */
-            padding: 15px 0; /* Padding for vertical spacing */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+            background-color: #2b2b2b;
+            padding: 15px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
         }
-
         nav ul {
-            list-style: none; /* Remove default list styling */
-            padding: 0; /* Remove padding */
-            margin: 0; /* Remove margin */
-            text-align: center; /* Center align the list items */
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
         }
-
         nav ul li {
-            display: inline; /* Display list items inline */
-            margin: 0 20px; /* Horizontal spacing between items */
+            display: inline;
+            margin: 0 20px;
         }
-
         nav ul li a {
-            text-decoration: none; /* Remove underline from links */
-            color: #fff; /* White color for text */
-            font-size: 18px; /* Font size for links */
-            font-weight: bold; /* Bold font weight */
-            position: relative; /* For positioning pseudo-elements */
-            transition: color 0.3s; /* Smooth color transition on hover */
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            position: relative;
+            transition: color 0.3s;
         }
-
         nav ul li a.active {
-            color: #8f5cf4; /* Active link color */
+            color: #8f5cf4;
         }
-
         nav ul li a:hover {
-            color: #8f5cf4; /* Hover color */
+            color: #8f5cf4;
         }
-
         nav ul li a::after {
             content: '';
             display: block;
-            height: 3px; /* Thickness of the underline */
-            background: #8f5cf4; /* Color of the underline */
-            position: absolute; /* Absolute positioning */
-            left: 0; /* Align to the left of the link */
-            bottom: -5px; /* Position below the text */
-            width: 0; /* Start with zero width */
-            transition: width 0.3s; /* Smooth width transition */
+            height: 3px;
+            background: #8f5cf4;
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 0;
+            transition: width 0.3s;
         }
-
         nav ul li a:hover::after {
-            width: 100%; /* Full width on hover */
+            width: 100%;
         }
-    
-        /* Hero Section */
         .hero {
             padding: 100px 20px;
             background-color: #1a1a1a;
-            background-image: url('images/soundfx-bg.jpg'); /* Replace with a relevant background image */
+            background-image: url('images/soundfx-bg.jpg');
             background-size: cover;
             background-position: center;
         }
-
         .hero h1 {
             font-size: 50px;
             color: #8f5cf4;
             text-shadow: 2px 2px 10px rgba(143, 92, 244, 0.8);
             animation: fadeIn 2s ease-in-out;
         }
-    
         .hero p {
             font-size: 20px;
             color: #ddd;
             margin-top: 20px;
         }
-    
-        /* Sound FX Section */
         .section-content {
             padding: 50px 20px;
             background-color: #252525;
         }
-    
         .section-content h2 {
             font-size: 36px;
             color: #8f5cf4;
             margin-bottom: 30px;
         }
-    
         .sound-container {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
         }
-    
         .sound {
             margin: 20px;
             background-color: #1a1a1a;
@@ -142,17 +116,14 @@
             box-shadow: 0 0 20px rgba(143, 92, 244, 0.8);
             transition: transform 0.3s, box-shadow 0.3s;
         }
-    
         .sound:hover {
             transform: scale(1.05);
             box-shadow: 0 0 40px rgba(143, 92, 244, 1);
         }
-    
         .sound p {
             margin-bottom: 15px;
             font-size: 18px;
         }
-    
         .sound a {
             display: inline-block;
             margin-top: 10px;
@@ -164,116 +135,120 @@
             border: 2px solid #8f5cf4;
             padding: 10px 20px;
             border-radius: 5px;
-            box-shadow: 0 0 10px rgba(143, 92, 244, 0.8); /* Glow effect */
+            box-shadow: 0 0 10px rgba(143, 92, 244, 0.8);
             display: flex;
             align-items: center;
             justify-content: center;
         }
-    
         .sound a:hover {
             color: #fff;
             background-color: #1f1d24;
             border-color: #7e4dcf;
-            box-shadow: 0 0 20px rgba(143, 92, 244, 1); /* Enhanced glow effect on hover */
+            box-shadow: 0 0 20px rgba(143, 92, 244, 1);
         }
-    
         .sound a .fa {
-            margin-right: 8px; /* Space between icon and text */
+            margin-right: 8px;
         }
-    
-        /* Purple Themed Sections */
         .explosion-sounds {
-            background-color: #252525; /* Purple background */
+            background-color: #252525;
             padding: 50px 20px;
-            color: #fff; /* White text color */
+            color: #fff;
         }
-
         .explosion-sounds h2 {
-            color: #fff; /* White heading color */
-            text-shadow: 2px 2px 10px rgba(143, 92, 244, 0.8); /* Optional glow effect */
+            color: #fff;
+            text-shadow: 2px 2px 10px rgba(143, 92, 244, 0.8);
         }
-
         .explosion-sounds .sound {
-            background-color: #252525; /* Darker purple for sound blocks */
-            box-shadow: 0 0 20px rgba(143, 92, 244, 0.8); /* Glow effect */
+            background-color: #252525;
+            box-shadow: 0 0 20px rgba(143, 92, 244, 0.8);
         }
-
         .explosion-sounds .sound a {
-            color: #fff; /* White link color */
-            background-color: #8a2be2; /* Medium purple background for buttons */
-            border-color: #6a0dad; /* Darker purple border */
-            box-shadow: 0 0 10px rgba(143, 92, 244, 0.8); /* Glow effect */
+            color: #fff;
+            background-color: #8a2be2;
+            border-color: #6a0dad;
+            box-shadow: 0 0 10px rgba(143, 92, 244, 0.8);
         }
-
         .explosion-sounds .sound a:hover {
-            color: #fff; /* White text color on hover */
-            background-color: #6a0dad; /* Darker purple background on hover */
-            border-color: #4b0082; /* Even darker purple border on hover */
-            box-shadow: 0 0 20px rgba(143, 92, 244, 1); /* Enhanced glow effect on hover */
+            color: #fff;
+            background-color: #6a0dad;
+            border-color: #4b0082;
+            box-shadow: 0 0 20px rgba(143, 92, 244, 1);
         }
-
         .swoosh-woosh {
-            background-color: #252525; /* Purple background */
+            background-color: #252525;
             padding: 50px 20px;
-            color: #fff; /* White text color */
+            color: #fff;
         }
-
         .swoosh-woosh h2 {
-            color: #fff; /* White heading color */
-            text-shadow: 2px 2px 10px rgba(143, 92, 244, 0.8); /* Optional glow effect */
+            color: #fff;
+            text-shadow: 2px 2px 10px rgba(143, 92, 244, 0.8);
         }
-
         .swoosh-woosh .sound {
-            background-color: #252525; /* Darker purple for sound blocks */
-            box-shadow: 0 0 20px rgba(143, 92, 244, 0.8); /* Glow effect */
+            background-color: #252525;
+            box-shadow: 0 0 20px rgba(143, 92, 244, 0.8);
         }
-
         .swoosh-woosh .sound a {
-            color: #fff; /* White link color */
-            background-color: #8a2be2; /* Medium purple background for buttons */
-            border-color: #6a0dad; /* Darker purple border */
-            box-shadow: 0 0 10px rgba(143, 92, 244, 0.8); /* Glow effect */
+            color: #fff;
+            background-color: #8a2be2;
+            border-color: #6a0dad;
+            box-shadow: 0 0 10px rgba(143, 92, 244, 0.8);
         }
-
         .swoosh-woosh .sound a:hover {
-            color: #fff; /* White text color on hover */
-            background-color: #6a0dad; /* Darker purple background on hover */
-            border-color: #4b0082; /* Even darker purple border on hover */
-            box-shadow: 0 0 20px rgba(143, 92, 244, 1); /* Enhanced glow effect on hover */
+            color: #fff;
+            background-color: #6a0dad;
+            border-color: #4b0082;
+            box-shadow: 0 0 20px rgba(143, 92, 244, 1);
         }
-
-        /* New Car Transforming Sounds Section */
         .car-transforming-sounds {
-            background-color: #252525; /* Dark background */
+            background-color: #252525;
             padding: 50px 20px;
-            color: #fff; /* White text color */
+            color: #fff;
         }
-
         .car-transforming-sounds h2 {
-            color: #8f5cf4; /* Purple heading color */
-            text-shadow: 2px 2px 10px rgba(143, 92, 244, 0.8); /* Optional glow effect */
+            color: #8f5cf4;
+            text-shadow: 2px 2px 10px rgba(143, 92, 244, 0.8);
         }
-
         .car-transforming-sounds .sound {
-            background-color: #1a1a1a; /* Darker block color */
-            box-shadow: 0 0 20px rgba(143, 92, 244, 0.8); /* Glow effect */
+            background-color: #1a1a1a;
+            box-shadow: 0 0 20px rgba(143, 92, 244, 0.8);
         }
-
         .car-transforming-sounds .sound a {
-            color: #ffffff; /* Purple link color */
-            background-color: #8f5cf4; /* Dark background for buttons */
-            border-color: #6a0dad; /* Purple border */
-            box-shadow: 0 0 10px rgba(143, 92, 244, 0.8); /* Glow effect */
+            color: #ffffff;
+            background-color: #8f5cf4;
+            border-color: #6a0dad;
+            box-shadow: 0 0 10px rgba(143, 92, 244, 0.8);
         }
-
         .car-transforming-sounds .sound a:hover {
-            color: #fff; /* White text color on hover */
-            background-color: #6a0dad; /* Darker background on hover */
-            border-color: #7e4dcf; /* Darker purple border on hover */
-            box-shadow: 0 0 20px rgba(143, 92, 244, 1); /* Enhanced glow effect on hover */
+            color: #fff;
+            background-color: #6a0dad;
+            border-color: #7e4dcf;
+            box-shadow: 0 0 20px rgba(143, 92, 244, 1);
         }
-    
-        /* Footer */
+        .lightning-strike-sounds {
+            background-color: #252525;
+            padding: 50px 20px;
+            color: #fff;
+        }
+        .lightning-strike-sounds h1 {
+            color: #8f5cf4;
+            text-shadow: 2px 2px 10px rgba(143, 92, 244, 0.8);
+        }
+        .lightning-strike-sounds .sound {
+            background-color: #1a1a1a;
+            box-shadow: 0 0 20px rgba(143, 92, 244, 0.8);
+        }
+        .lightning-strike-sounds .sound a {
+            color: #ffffff;
+            background-color: #8f5cf4;
+            border-color: #6a0dad;
+            box-shadow: 0 0 10px rgba(143, 92, 244, 0.8);
+        }
+        .lightning-strike-sounds .sound a:hover {
+            color: #fff;
+            background-color: #6a0dad;
+            border-color: #7e4dcf;
+            box-shadow: 0 0 20px rgba(143, 92, 244, 1);
+        }
         footer {
             background-color: #2b2b2b;
             padding: 15px 0;
@@ -281,17 +256,13 @@
             color: #8f8f8f;
             font-size: 14px;
         }
-    
-        /* Animations */
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
-        
     </style>
 </head>
 <body>
-    <!-- Navigation Bar -->
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -302,161 +273,150 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
-
-    <!-- Hero Section -->
     <section id="home" class="hero">
         <h1>Sound FX</h1>
         <p>Browse our collection of high-quality sound effects for your projects!</p>
     </section>
-
-    <!-- Swoosh & Woosh Sounds Section -->
     <section id="swoosh-woosh" class="hero swoosh-woosh">
         <h1>Swoosh & Whoosh Sounds</h1>
-
         <div class="sound-container">
-            <!-- Swoosh Sound 1 -->
             <div class="sound">
                 <p>Whoosh Swoosh 1</p>
-                <!-- Sound Preview -->
                 <audio controls>
                     <source src="sounds/15. Whoosh Swoosh.wav" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
-                <!-- Download Button -->
                 <a href="https://drive.google.com/uc?export=download&id=1yAeKpuGxfRKfjozROoxPrgZyep-90k6g" download>
                     <i class="fa fa-download"></i> Download
                 </a>
             </div>
-
-            <!-- Woosh Sound 1 -->
             <div class="sound">
                 <p>Whoosh And Hit 1</p>
-                <!-- Sound Preview -->
                 <audio controls>
                     <source src="sounds/Whoosh and Hit.mp3" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
-                <!-- Download Button -->
                 <a href="https://drive.google.com/uc?export=download&id=10txMuXdKcs_QoH5r_u0EJLaiJMJv8JBw" download>
                     <i class="fa fa-download"></i> Download
                 </a>
             </div>
-
-            <!-- Woosh Sound 2 -->
             <div class="sound">
                 <p>Short Whoosh 1</p>
-                <!-- Sound Preview -->
                 <audio controls>
                     <source src="sounds/Short Whoosh.wav" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
-                <!-- Download Button -->
                 <a href="https://drive.google.com/uc?export=download&id=1wQwmzNWa38uUzG13qlA5lybssBMysbcN" download>
                     <i class="fa fa-download"></i> Download
                 </a>
             </div>
         </div>
     </section>
-
-    <!-- Explosion Sounds Section -->
     <section id="explosion" class="hero explosion explosion-sounds">
         <h1>Explosion Sounds</h1>
-
         <div class="sound-container">
-            <!-- Explosion Sound 1 -->
             <div class="sound">
                 <p>Explosion Sound 1</p>
-                <!-- Sound Preview -->
                 <audio controls>
                     <source src="sounds/explosion1.mp3" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
-                <!-- Download Button -->
                 <a href="https://drive.google.com/uc?export=download&id=1bDtbb_gWBWKDb-JY7IoqYo6wuiy1I9Xg" download>
                     <i class="fa fa-download"></i> Download
                 </a>
             </div>
-
-            <!-- Explosion Sound 2 -->
             <div class="sound">
                 <p>Explosion Sound 2</p>
-                <!-- Sound Preview -->
                 <audio controls>
                     <source src="sounds/explosion2.mp3" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
-                <!-- Download Button -->
                 <a href="https://drive.google.com/uc?export=download&id=1Djvl8-inLQg1pZlHfc4aNBUoYOsKq6EG" download>
                     <i class="fa fa-download"></i> Download
                 </a>
             </div>
-
-            <!-- Explosion Sound 3 -->
             <div class="sound">
                 <p>Explosion Sound 3</p>
-                <!-- Sound Preview -->
                 <audio controls>
                     <source src="sounds/boom.mp3" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
-                <!-- Download Button -->
                 <a href="https://drive.google.com/uc?export=download&id=1WwCcoHTjZQdnbiZSpby2LaG_AZVwDHLs" download>
                     <i class="fa fa-download"></i> Download
                 </a>
             </div>
         </div>
     </section>
-
-    <!-- Car Transforming Sounds Section -->
     <section id="car-transforming" class="hero car-transforming-sounds">
         <h1>Car Transforming Sounds</h1>
-
         <div class="sound-container">
-            <!-- Car Transforming Sound 1 -->
             <div class="sound">
                 <p>Car Transforming 1</p>
-                <!-- Sound Preview -->
                 <audio controls>
                     <source src="sounds/car-transforming1.mp3" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
-                <!-- Download Button -->
                 <a href="https://drive.google.com/uc?export=download&id=1X-WnkITBM63YkNLubJTtSsrfAPntSmAp" download>
                     <i class="fa fa-download"></i> Download
                 </a>
             </div>
-
-            <!-- Car Transforming Sound 2 -->
             <div class="sound">
                 <p>Car Transforming 2</p>
-                <!-- Sound Preview -->
                 <audio controls>
                     <source src="sounds/car-transforming2.mp3" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
-                <!-- Download Button -->
                 <a href="https://drive.google.com/uc?export=download&id=YourFileIDHere" download>
                     <i class="fa fa-download"></i> Download
                 </a>
             </div>
-
-            <!-- Car Transforming Sound 3 -->
             <div class="sound">
                 <p>Car Transforming 3</p>
-                <!-- Sound Preview -->
                 <audio controls>
                     <source src="sounds/car-transforming3.mp3" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
-                <!-- Download Button -->
                 <a href="https://drive.google.com/uc?export=download&id=YourFileIDHere" download>
                     <i class="fa fa-download"></i> Download
                 </a>
             </div>
         </div>
     </section>
-
-    <!-- Footer -->
+    <section id="lightning-strike" class="hero lightning-strike-sounds">
+        <h1>Lightning Strike Sounds</h1>
+        <div class="sound-container">
+            <div class="sound">
+                <p>Lightning Strike 1</p>
+                <audio controls>
+                    <source src="sounds/lightning-strike1.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <a href="https://drive.google.com/uc?export=download&id=1r82Wl-35iQFb3DwHH4kgI9IkoBXP7tM1" download>
+                    <i class="fa fa-download"></i> Download
+                </a>
+            </div>
+            <div class="sound">
+                <p>Lightning Strike 2</p>
+                <audio controls>
+                    <source src="sounds/lightning-strike2.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <a href="https://drive.google.com/uc?export=download&id=YourFileIDHere" download>
+                    <i class="fa fa-download"></i> Download
+                </a>
+            </div>
+            <div class="sound">
+                <p>Lightning Strike 3</p>
+                <audio controls>
+                    <source src="sounds/lightning-strike3.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <a href="https://drive.google.com/uc?export=download&id=YourFileIDHere" download>
+                    <i class="fa fa-download"></i> Download
+                </a>
+            </div>
+        </div>
+    </section>
     <footer id="contact">
         <p>© 2024 All rights reserved. Raykoww FX</p>
     </footer>
