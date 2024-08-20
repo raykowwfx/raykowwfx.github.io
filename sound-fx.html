@@ -43,57 +43,56 @@
         }
     
         /* Navigation Bar */
-nav {
-    background-color: #2b2b2b; /* Dark background for the nav */
-    padding: 15px 0; /* Padding for vertical spacing */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
-}
+        nav {
+            background-color: #2b2b2b; /* Dark background for the nav */
+            padding: 15px 0; /* Padding for vertical spacing */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+        }
 
-nav ul {
-    list-style: none; /* Remove default list styling */
-    padding: 0; /* Remove padding */
-    margin: 0; /* Remove margin */
-    text-align: center; /* Center align the list items */
-}
+        nav ul {
+            list-style: none; /* Remove default list styling */
+            padding: 0; /* Remove padding */
+            margin: 0; /* Remove margin */
+            text-align: center; /* Center align the list items */
+        }
 
-nav ul li {
-    display: inline; /* Display list items inline */
-    margin: 0 20px; /* Horizontal spacing between items */
-}
+        nav ul li {
+            display: inline; /* Display list items inline */
+            margin: 0 20px; /* Horizontal spacing between items */
+        }
 
-nav ul li a {
-    text-decoration: none; /* Remove underline from links */
-    color: #fff; /* White color for text */
-    font-size: 18px; /* Font size for links */
-    font-weight: bold; /* Bold font weight */
-    position: relative; /* For positioning pseudo-elements */
-    transition: color 0.3s; /* Smooth color transition on hover */
-}
+        nav ul li a {
+            text-decoration: none; /* Remove underline from links */
+            color: #fff; /* White color for text */
+            font-size: 18px; /* Font size for links */
+            font-weight: bold; /* Bold font weight */
+            position: relative; /* For positioning pseudo-elements */
+            transition: color 0.3s; /* Smooth color transition on hover */
+        }
 
-nav ul li a.active {
-    color: #8f5cf4; /* Active link color */
-}
+        nav ul li a.active {
+            color: #8f5cf4; /* Active link color */
+        }
 
-nav ul li a:hover {
-    color: #8f5cf4; /* Hover color */
-}
+        nav ul li a:hover {
+            color: #8f5cf4; /* Hover color */
+        }
 
-nav ul li a::after {
-    content: '';
-    display: block;
-    height: 3px; /* Thickness of the underline */
-    background: #8f5cf4; /* Color of the underline */
-    position: absolute; /* Absolute positioning */
-    left: 0; /* Align to the left of the link */
-    bottom: -5px; /* Position below the text */
-    width: 0; /* Start with zero width */
-    transition: width 0.3s; /* Smooth width transition */
-}
+        nav ul li a::after {
+            content: '';
+            display: block;
+            height: 3px; /* Thickness of the underline */
+            background: #8f5cf4; /* Color of the underline */
+            position: absolute; /* Absolute positioning */
+            left: 0; /* Align to the left of the link */
+            bottom: -5px; /* Position below the text */
+            width: 0; /* Start with zero width */
+            transition: width 0.3s; /* Smooth width transition */
+        }
 
-nav ul li a:hover::after {
-    width: 100%; /* Full width on hover */
-}
-
+        nav ul li a:hover::after {
+            width: 100%; /* Full width on hover */
+        }
     
         /* Hero Section */
         .hero {
@@ -102,6 +101,12 @@ nav ul li a:hover::after {
             background-image: url('images/soundfx-bg.jpg'); /* Replace with a relevant background image */
             background-size: cover;
             background-position: center;
+        }
+
+        .explosion {
+            background-color: #252525; /* Dark gray background */
+            background-image: none; /* Remove background image */
+            padding: 50px 20px; /* Add padding */
         }
     
         .hero h1 {
@@ -217,50 +222,56 @@ nav ul li a:hover::after {
         <p>Browse our collection of high-quality sound effects for your projects!</p>
     </section>
 
-    <!-- Sound FX Section -->
-    <section id="sound-fx-content" class="section-content">
-        <h2>Featured Sound FX</h2>
-        <div class="sound-container">
-            <div class="sound">
-                <p>Explosion Sound</p>
-                <audio controls>
-                    <source src="sounds/explosion1.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
-                <br>
-                <a href="https://drive.usercontent.google.com/u/1/uc?id=1FM88W2WVa8S1w3pZCczFlMJLSch7jNna&export=download" download>
-                    <i class="fa fa-download"></i> Download
-                </a>
-            </div>
-            <div class="sound">
-                <p>Dying Light Bulb</p>
-                <audio controls>
-                    <source src="sounds/Dying Light Bulb.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
-                <br>
-                <a href="https://drive.google.com/uc?export=download&id=1Z2nRWR_TwhBBZZ1pX_ed-rYJDodoR5ZZ" download>
-                    <i class="fa fa-download"></i> Download
-                </a>
-            </div>
-            <div class="sound">
-                <p>Lightning Strike Sound</p>
-                <audio controls>
-                    <source src="sounds/lightning strike1.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
-                <br>
-                <a href="https://drive.usercontent.google.com/u/1/uc?id=1qRXcfwNiKSPTs0UnksRPuBrea7igzWCa&export=download" download>
-                    <i class="fa fa-download"></i> Download
-                </a>
-            </div>
-            <!-- Add more sound effects here -->
-        </div>
-    </section>
+    <!-- Explosion Sounds Section -->
+<section id="explosion" class="hero explosion">
+    <h1>Explosion Sounds</h1>
 
-    <!-- Footer -->
-    <footer id="contact">
-        <p>© 2024 All rights reserved. Raykoww FX</p>
-    </footer>
-</body>
-</html>
+    <div class="sound-container">
+        <!-- Explosion Sound 1 -->
+        <div class="sound">
+            <p>Explosion Sound 1</p>
+            <!-- Sound Preview -->
+            <audio controls>
+                <source src="sounds/explosion1.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <!-- Download Button -->
+            <a href="https://drive.google.com/uc?export=download&id=1bDtbb_gWBWKDb-JY7IoqYo6wuiy1I9Xg" download>
+                <i class="fa fa-download"></i> Download
+            </a>
+        </div>
+
+        <!-- Explosion Sound 2 -->
+        <div class="sound">
+            <p>Explosion Sound 2</p>
+            <!-- Sound Preview -->
+            <audio controls>
+                <source src="sounds/explosion2.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <!-- Download Button -->
+            <a href="https://drive.google.com/uc?export=download&id=1Djvl8-inLQg1pZlHfc4aNBUoYOsKq6EG" download>
+                <i class="fa fa-download"></i> Download
+            </a>
+        </div>
+
+        <!-- Explosion Sound 3 -->
+        <div class="sound">
+            <p>Explosion Sound 3</p>
+            <!-- Sound Preview -->
+            <audio controls>
+                <source src="sounds/explosion3.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <!-- Download Button -->
+            <a href="sounds/explosion3.mp3" download>
+                <i class="fa fa-download"></i> Download
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer id="contact">
+    <p>© 2024 All rights reserved. Raykoww FX</p>
+</footer>
