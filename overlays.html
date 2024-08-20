@@ -15,88 +15,87 @@
             background-color: #0e0e0e;
             color: #fff;
             text-align: center;
-            scrollbar-color: #8f5cf4 #1a1a1a; /* Firefox */
-            scrollbar-width: thin; /* Firefox */
+            scrollbar-color: #8f5cf4 #1a1a1a;
+            scrollbar-width: thin;
         }
 
-        /* Scrollbar Styles for WebKit Browsers (Chrome, Safari) */
         ::-webkit-scrollbar {
-            width: 8px; /* Width of the scrollbar */
+            width: 8px;
         }
 
         ::-webkit-scrollbar-track {
-            background: #1a1a1a; /* Background color of the scrollbar track */
+            background: #1a1a1a;
         }
 
         ::-webkit-scrollbar-thumb {
-            background: #8f5cf4; /* Color of the scrollbar thumb */
-            border-radius: 10px; /* Rounded corners of the scrollbar thumb */
-            box-shadow: 0 0 10px rgba(143, 92, 244, 0.8); /* Glow effect */
+            background: #8f5cf4;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(143, 92, 244, 0.8);
             transition: background 0.3s, box-shadow 0.3s;
         }
 
         ::-webkit-scrollbar-thumb:hover {
-            background: #7e4dcf; /* Darker shade on hover */
-            box-shadow: 0 0 20px rgba(143, 92, 244, 1); /* Enhanced glow effect on hover */
+            background: #7e4dcf;
+            box-shadow: 0 0 20px rgba(143, 92, 244, 1);
         }
 
         /* Navigation Bar */
         nav {
-            background-color: #2b2b2b; /* Dark background for the nav */
-            padding: 15px 0; /* Padding for vertical spacing */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+            background-color: #2b2b2b;
+            padding: 15px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
         }
 
         nav ul {
-            list-style: none; /* Remove default list styling */
-            padding: 0; /* Remove padding */
-            margin: 0; /* Remove margin */
-            text-align: center; /* Center align the list items */
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
         }
 
         nav ul li {
-            display: inline; /* Display list items inline */
-            margin: 0 20px; /* Horizontal spacing between items */
+            display: inline;
+            margin: 0 20px;
         }
 
         nav ul li a {
-            text-decoration: none; /* Remove underline from links */
-            color: #fff; /* White color for text */
-            font-size: 18px; /* Font size for links */
-            font-weight: bold; /* Bold font weight */
-            position: relative; /* For positioning pseudo-elements */
-            transition: color 0.3s; /* Smooth color transition on hover */
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            position: relative;
+            transition: color 0.3s;
         }
 
         nav ul li a.active {
-            color: #8f5cf4; /* Active link color */
+            color: #8f5cf4;
         }
 
         nav ul li a:hover {
-            color: #8f5cf4; /* Hover color */
+            color: #8f5cf4;
         }
 
         nav ul li a::after {
             content: '';
             display: block;
-            height: 3px; /* Thickness of the underline */
-            background: #8f5cf4; /* Color of the underline */
-            position: absolute; /* Absolute positioning */
-            left: 0; /* Align to the left of the link */
-            bottom: -5px; /* Position below the text */
-            width: 0; /* Start with zero width */
-            transition: width 0.3s; /* Smooth width transition */
+            height: 3px;
+            background: #8f5cf4;
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 0;
+            transition: width 0.3s;
         }
 
         nav ul li a:hover::after {
-            width: 100%; /* Full width on hover */
+            width: 100%;
         }
 
         /* Hero Section */
         .hero {
             padding: 100px 20px;
             background-color: #1a1a1a;
-            background-image: url('images/hero-bg.jpg'); /* Replace with your background image */
+            background-image: url('images/hero-bg.jpg');
             background-size: cover;
             background-position: center;
         }
@@ -168,7 +167,7 @@
             border: 2px solid #8f5cf4;
             padding: 10px 20px;
             border-radius: 5px;
-            box-shadow: 0 0 10px rgba(143, 92, 244, 0.8); /* Glow effect */
+            box-shadow: 0 0 10px rgba(143, 92, 244, 0.8);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -178,11 +177,11 @@
             color: #fff;
             background-color: #8f5cf4;
             border-color: #7e4dcf;
-            box-shadow: 0 0 20px rgba(143, 92, 244, 1); /* Enhanced glow effect on hover */
+            box-shadow: 0 0 20px rgba(143, 92, 244, 1);
         }
 
         .overlay a .fa {
-            margin-right: 8px; /* Space between icon and text */
+            margin-right: 8px;
         }
 
         /* Shockwave Section */
@@ -195,8 +194,8 @@
 
         .shockwave {
             position: relative;
-            width: 300px; /* Increased width */
-            height: 300px; /* Increased height */
+            width: 300px;
+            height: 300px;
             background-color: #000;
             border-radius: 10px;
             overflow: hidden;
@@ -217,15 +216,15 @@
 
         .shockwave-text {
             position: absolute;
-            bottom: 80px; /* Increased space for button */
+            bottom: 80px;
             left: 50%;
             transform: translateX(-50%);
-            color: #8f5cf4; /* Glowing purple text */
-            font-size: 28px; /* Larger font size */
+            color: #8f5cf4;
+            font-size: 28px;
             background: rgba(0, 0, 0, 0.6);
             padding: 10px 15px;
             border-radius: 5px;
-            text-shadow: 0 0 10px rgba(143, 92, 244, 0.8); /* Glowing effect */
+            text-shadow: 0 0 10px rgba(143, 92, 244, 0.8);
             transition: opacity 0.3s;
         }
 
@@ -235,7 +234,7 @@
 
         .download-button {
             position: absolute;
-            bottom: 10px; /* Position above the text */
+            bottom: 10px;
             left: 50%;
             transform: translateX(-50%);
             display: flex;
@@ -248,16 +247,64 @@
             text-decoration: none;
             font-size: 16px;
             transition: background-color 0.3s, box-shadow 0.3s;
-            box-shadow: 0 0 10px rgba(143, 92, 244, 0.8); /* Glow effect */
+            box-shadow: 0 0 10px rgba(143, 92, 244, 0.8);
         }
 
         .download-button:hover {
             background-color: #7e4dcf;
-            box-shadow: 0 0 20px rgba(143, 92, 244, 1); /* Enhanced glow effect on hover */
+            box-shadow: 0 0 20px rgba(143, 92, 244, 1);
         }
 
         .download-button .fa {
-            margin-right: 8px; /* Space between icon and text */
+            margin-right: 8px;
+        }
+
+        /* Triangle Particles Section */
+        .triangle-particles-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .triangle-particles {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            background-color: #000;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(143, 92, 244, 0.8);
+            transition: transform 0.3s;
+        }
+
+        .triangle-particles:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 40px rgba(143, 92, 244, 1);
+        }
+
+        .triangle-particles-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .triangle-particles-text {
+            position: absolute;
+            bottom: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #8f5cf4;
+            font-size: 28px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-shadow: 0 0 10px rgba(143, 92, 244, 0.8);
+            transition: opacity 0.3s;
+        }
+
+        .triangle-particles:hover .triangle-particles-text {
+            opacity: 1;
         }
 
         /* Footer */
@@ -505,6 +552,29 @@
         </div>
     </section>
 
+    <!-- Triangle Particles Section -->
+    <section id="triangle-particles" class="section-content">
+        <h2>Triangle Particles</h2>
+        <div class="triangle-particles-container">
+            <!-- Triangle Particles 1 -->
+            <div class="triangle-particles">
+                <video class="triangle-particles-video" src="videos/TriangleParticles_01.mp4" muted></video>
+                <div class="triangle-particles-text">Preview</div>
+                <a class="download-button" href="https://drive.google.com/uc?export=download&id=1KmWk1LGNqR1DXYOL-SLm2uiFzfiRpdD8" download>
+                    <i class="fa fa-download"></i> Download
+                </a>
+            </div>
+            <!-- Triangle Particles 2 -->
+            <div class="triangle-particles">
+                <video class="triangle-particles-video" src="videos/TriangleParticles_02.mp4" muted></video>
+                <div class="triangle-particles-text">Preview</div>
+                <a class="download-button" href="https://drive.google.com/uc?export=download&id=15929xFlWaqzSOibUKmleykFIAybJ8cZ6" download>
+                    <i class="fa fa-download"></i> Download
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer>
         <p>&copy; 2024 Raykoww FX. All rights reserved.</p>
@@ -520,9 +590,23 @@
 
             shockwave.addEventListener('mouseout', () => {
                 video.pause();
-                video.currentTime = 0; // Reset video to start
+                video.currentTime = 0;
             });
         });
+
+        document.querySelectorAll('.triangle-particles').forEach(triangleParticles => {
+            const video = triangleParticles.querySelector('.triangle-particles-video');
+
+            triangleParticles.addEventListener('mouseover', () => {
+                video.play();
+            });
+
+            triangleParticles.addEventListener('mouseout', () => {
+                video.pause();
+                video.currentTime = 0;
+            });
+        });
+
     </script>
 
 </body>
