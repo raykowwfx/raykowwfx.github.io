@@ -301,6 +301,54 @@
             opacity: 1;
         }
 
+        .lightning-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.lightning {
+    position: relative;
+    width: 500px;
+    height: 300px;
+    background-color: #000;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(143, 92, 244, 0.8);
+    transition: transform 0.3s;
+}
+
+.lightning:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px rgba(143, 92, 244, 1);
+}
+
+.lightning-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.lightning-text {
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #8f5cf4;
+    font-size: 28px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-shadow: 0 0 10px rgba(143, 92, 244, 0.8);
+    transition: opacity 0.3s;
+}
+
+.lightning:hover .lightning-text {
+    opacity: 1;
+}
+
+
         footer {
             background-color: #2b2b2b;
             padding: 15px 0;
@@ -334,6 +382,13 @@
     <section id="shockwaves" class="section-content">
         <h2>Shockwave Effects</h2>
         <div class="shockwave-container">
+            <div class="shockwave">
+                <video class="shockwave-video" src="videos/shockwave26.mp4" muted></video>
+                <div class="shockwave-text">Preview</div>
+                <a class="download-button" href="https://drive.google.com/uc?export=download&id=1FKHZDFpx3V8EuIru0Z3cObKU1sYGvp_I" download>
+                    <i class="fa fa-download"></i> Download
+                </a>
+            </div>
             <div class="shockwave">
                 <video class="shockwave-video" src="videos/bottom particle shockwave.mp4" muted></video>
                 <div class="shockwave-text">Preview</div>
@@ -519,7 +574,7 @@
         </div>
     </section>
     <section id="particles" class="section-content">
-        <h2>Particles</h2>
+        <h2>Particles Effects</h2>
         <div class="particles-container">
             <div class="particles">
                 <video class="particles-video" src="videos/TriangleParticles_01.mp4" muted></video>
@@ -554,10 +609,48 @@
                     <i class="fa fa-download"></i> Download
                 </a>
             </div>
-            <!-- Repeat for additional smoke effects -->
         </div>
     </section>
-    
+    <section id="lightning-strike" class="section-content">
+        <h2>Lightning Strike Effects</h2>
+        <div class="lightning-container">
+            <div class="lightning">
+                <video class="lightning-video" src="videos/Lightning_Strike (1).mp4" muted></video>
+                <div class="lightning-text">Preview</div>
+                <a class="download-button" href="https://drive.google.com/uc?export=download&id=10ph_XsuUy8tf6guAj1gvjndDqx-p5eq6" download>
+                    <i class="fa fa-download"></i> Download
+                </a>
+            </div>
+            <div class="lightning">
+                <video class="lightning-video" src="videos/Lightning_Strike (2).mp4" muted></video>
+                <div class="lightning-text">Preview</div>
+                <a class="download-button" href="https://drive.google.com/uc?export=download&id=1uqWBBibFR9JyJiXc-OVNAy960XHIkpmL" download>
+                    <i class="fa fa-download"></i> Download
+                </a>
+            </div>
+            <div class="lightning">
+                <video class="lightning-video" src="videos/Lightning_Strike (3).mp4" muted></video>
+                <div class="lightning-text">Preview</div>
+                <a class="download-button" href="https://drive.google.com/uc?export=download&id=1IjbxTrxNMbM91pcTD7w8pRuUobSgjeAS" download>
+                    <i class="fa fa-download"></i> Download
+                </a>
+            </div>
+            <div class="lightning">
+                <video class="lightning-video" src="videos/Lightning_Strike (4).mp4" muted></video>
+                <div class="lightning-text">Preview</div>
+                <a class="download-button" href="https://drive.google.com/uc?export=download&id=1nB1P_Bru_H01DrjSNW-KUdvTN6agCKso" download>
+                    <i class="fa fa-download"></i> Download
+                </a>
+            </div>
+            <div class="lightning">
+                <video class="lightning-video" src="videos/Lightning_Strike (5).mp4" muted></video>
+                <div class="lightning-text">Preview</div>
+                <a class="download-button" href="https://drive.google.com/uc?export=download&id=1N-f58LmlljA25VVxUcVwnz0nUEixz_9Z" download>
+                    <i class="fa fa-download"></i> Download
+                </a>
+            </div>
+        </div>
+    </section>
     <footer>
         <p>&copy; 2024 Raykoww FX. All rights reserved.</p>
     </footer>
@@ -592,7 +685,18 @@
         video.currentTime = 0;
     });
 });
+document.querySelectorAll('.lightning').forEach(lightning => {
+    lightning.addEventListener('mouseover', () => {
+        const video = lightning.querySelector('.lightning-video');
+        video.play();
+    });
 
-    </script>
+    lightning.addEventListener('mouseout', () => {
+        const video = lightning.querySelector('.lightning-video');
+        video.pause();
+        video.currentTime = 0;  // Reset to start
+    });
+});
+        </script>
 </body>
 </html>
