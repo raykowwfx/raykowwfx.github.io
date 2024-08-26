@@ -383,14 +383,14 @@
         <h2>Shockwave Effects</h2>
         <div class="shockwave-container">
             <div class="shockwave">
-                <video class="shockwave-video" src="videos/shockwave26.mp4" muted></video>
+                <video class="shockwave-video" src="videos/Shockwave_26.mp4" muted></video>
                 <div class="shockwave-text">Preview</div>
                 <a class="download-button" href="https://drive.google.com/uc?export=download&id=1FKHZDFpx3V8EuIru0Z3cObKU1sYGvp_I" download>
                     <i class="fa fa-download"></i> Download
                 </a>
             </div>
             <div class="shockwave">
-                <video class="shockwave-video" src="videos/bottom particle shockwave.mp4" muted></video>
+                <video class="shockwave-video" src="videos/Shockwave_27.mp4" muted></video>
                 <div class="shockwave-text">Preview</div>
                 <a class="download-button" href="https://drive.google.com/uc?export=download&id=1tA46bCNrqRnjsi0CZf_DG4aE1GgM3VP2" download>
                     <i class="fa fa-download"></i> Download
@@ -662,48 +662,26 @@
         <p>&copy; 2024 Raykoww FX. All rights reserved.</p>
     </footer>
     <script>
-        document.querySelectorAll('.shockwave').forEach(shockwave => {
-            const video = shockwave.querySelector('.shockwave-video');
-            shockwave.addEventListener('mouseover', () => {
-                video.play();
+        function setupVideoControl(selector, videoSelector) {
+            document.querySelectorAll(selector).forEach(element => {
+                const video = element.querySelector(videoSelector);
+    
+                element.addEventListener('mouseover', () => {
+                    video.play();
+                });
+    
+                element.addEventListener('mouseout', () => {
+                    video.pause();
+                    video.currentTime = 0;
+                });
             });
-            shockwave.addEventListener('mouseout', () => {
-                video.pause();
-                video.currentTime = 0;
-            });
-        });
-        document.querySelectorAll('.particles').forEach(triangleParticles => {
-            const video = triangleParticles.querySelector('.particles-video');
-            triangleParticles.addEventListener('mouseover', () => {
-                video.play();
-            });
-            triangleParticles.addEventListener('mouseout', () => {
-                video.pause();
-                video.currentTime = 0;
-            });
-        });
-        document.querySelectorAll('.smoke').forEach(smoke => {
-    const video = smoke.querySelector('.smoke-video');
-    smoke.addEventListener('mouseover', () => {
-        video.play();
-    });
-    smoke.addEventListener('mouseout', () => {
-        video.pause();
-        video.currentTime = 0;
-    });
-});
-document.querySelectorAll('.lightning').forEach(lightning => {
-    lightning.addEventListener('mouseover', () => {
-        const video = lightning.querySelector('.lightning-video');
-        video.play();
-    });
-
-    lightning.addEventListener('mouseout', () => {
-        const video = lightning.querySelector('.lightning-video');
-        video.pause();
-        video.currentTime = 0;  // Reset to start
-    });
-});
-        </script>
+        }
+    
+        // Set up controls for different elements
+        setupVideoControl('.shockwave', '.shockwave-video');
+        setupVideoControl('.particles', '.particles-video');
+        setupVideoControl('.smoke', '.smoke-video');
+        setupVideoControl('.lightning', '.lightning-video');
+    </script>    
 </body>
 </html>
