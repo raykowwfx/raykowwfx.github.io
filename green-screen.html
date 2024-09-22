@@ -102,12 +102,13 @@
             color: #8f5cf4;
             margin-bottom: 30px;
         }
-        .green-screen-container {
+        .overlay-packs {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
+            gap: 20px;
         }
-        .green-screen {
+        .pack {
             margin: 20px;
             background-color: #1a1a1a;
             padding: 20px;
@@ -115,21 +116,22 @@
             box-shadow: 0 0 20px rgba(143, 92, 244, 0.8);
             transition: transform 0.3s, box-shadow 0.3s;
             width: 300px;
+            position: relative;
         }
-        .green-screen:hover {
+        .pack:hover {
             transform: scale(1.05);
             box-shadow: 0 0 40px rgba(143, 92, 244, 1);
         }
-        .green-screen img {
+        .pack img {
             width: 100%;
             border-radius: 10px;
             margin-bottom: 15px;
         }
-        .green-screen p {
+        .pack p {
             margin-bottom: 15px;
             font-size: 18px;
         }
-        .green-screen a {
+        .pack a {
             display: inline-block;
             text-decoration: none;
             color: #8f5cf4;
@@ -144,151 +146,20 @@
             align-items: center;
             justify-content: center;
         }
-        .green-screen a:hover {
+        .pack a:hover {
             color: #fff;
             background-color: #8f5cf4;
             border-color: #7e4dcf;
             box-shadow: 0 0 20px rgba(143, 92, 244, 1);
         }
-        .green-screen a .fa {
-            margin-right: 8px;
-        }
-        .Explosion-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
-        .Explosion {
-            position: relative;
-            width: 500px;
-            height: 300px;
-            background-color: #000;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 0 20px rgba(143, 92, 244, 0.8);
-            transition: transform 0.3s;
-        }
-        .Explosion:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 40px rgba(143, 92, 244, 1);
-        }
-        .Explosion-video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .Explosion-text {
-            position: absolute;
-            bottom: 80px;
-            left: 50%;
-            transform: translateX(-50%);
-            color: #8f5cf4;
-            font-size: 28px;
-            background: rgba(0, 0, 0, 0.6);
-            padding: 10px 15px;
-            border-radius: 5px;
-            text-shadow: 0 0 10px rgba(143, 92, 244, 0.8);
-            transition: opacity 0.3s;
-        }
-        .Explosion:hover .Explosion-text {
-            opacity: 1;
-        }
-        .download-button {
-            position: absolute;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #8f5cf4;
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 16px;
-            transition: background-color 0.3s, box-shadow 0.3s;
-            box-shadow: 0 0 10px rgba(143, 92, 244, 0.8);
-        }
-        .download-button:hover {
-            background-color: #7e4dcf;
-            box-shadow: 0 0 20px rgba(143, 92, 244, 1);
-        }
-        .download-button .fa {
+        .pack a .fa {
             margin-right: 8px;
         }
         footer {
-            background-color: #2b2b2b;
+            background-color: #1a1a1a;
             padding: 15px 0;
-            margin-top: 50px;
             color: #8f8f8f;
             font-size: 14px;
-        }
-        .meteor-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
-        .meteor {
-            position: relative;
-            width: 500px;
-            height: 300px;
-            background-color: #000;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 0 20px rgba(143, 92, 244, 0.8);
-            transition: transform 0.3s;
-        }
-        .meteor:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 40px rgba(143, 92, 244, 1);
-        }
-        .meteor-video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .meteor-text {
-            position: absolute;
-            bottom: 80px;
-            left: 50%;
-            transform: translateX(-50%);
-            color: #8f5cf4;
-            font-size: 28px;
-            background: rgba(0, 0, 0, 0.6);
-            padding: 10px 15px;
-            border-radius: 5px;
-            text-shadow: 0 0 10px rgba(143, 92, 244, 0.8);
-            transition: opacity 0.3s;
-        }
-        .meteor:hover .meteor-text {
-            opacity: 1;
-        }
-        .download-button {
-            position: absolute;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #8f5cf4;
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 16px;
-            transition: background-color 0.3s, box-shadow 0.3s;
-            box-shadow: 0 0 10px rgba(143, 92, 244, 0.8);
-        }
-        .download-button:hover {
-            background-color: #7e4dcf;
-            box-shadow: 0 0 20px rgba(143, 92, 244, 1);
-        }
-        .download-button .fa {
-            margin-right: 8px;
         }
         @keyframes fadeIn {
             from { opacity: 0; }
@@ -304,91 +175,42 @@
             <li><a href="green-screen.html" class="active">Green Screen</a></li>
             <li><a href="stock-videos.html">Stock Videos</a></li>
             <li><a href="overlays.html">Overlays</a></li>
-            <li><a href="images.html">Images</a></li>
             <li><a href="sound-fx.html">Sound FX</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
+
     <section id="home" class="hero">
         <h1>Green Screen</h1>
-        <p>Discover and download our green screen assets for your projects!</p>
+        <p>Discover and download our video effect Green Screen for your creative projects!</p>
     </section>
-    <section id="explosions" class="section-content">
-        <h2>Explosion Effects</h2>
-        <div class="Explosion-container">
-            <div class="Explosion">
-                <video class="Explosion-video" src="green screen/boom1.mp4" muted></video>
-                <div class="Explosion-text">Preview</div>
-                <a class="download-button" href="https://drive.google.com/uc?export=download&id=1CTk_e6LorlgAgQ2bk-SAUK219YH7JkXM" download>
-                    <i class="fa fa-download"></i> Download
+    
+    <section id="overlay-packs" class="section-content">
+        <h2>Download Overlay Packs</h2>
+        <div class="overlay-packs">
+            <div class="pack">
+                <img src="images/explosion-preview.jpg" alt="Explosion Effects Pack Preview">
+                <p>Explosion Effects Pack</p>
+                <a href="https://drive.google.com/uc?export=download&id=1CTk_e6LorlgAgQ2bk-SAUK219YH7JkXM" download>
+                    <i class="fa fa-download"></i> Download Pack
                 </a>
             </div>
-            <div class="Explosion">
-                <video class="Explosion-video" src="green screen/boom1_purple.mp4" muted></video>
-                <div class="Explosion-text">Preview</div>
-                <a class="download-button" href="https://drive.google.com/uc?export=download&id=18wgMJ8lvv15XLmcNMVyDpsw-7CQsTmB-" download>
-                    <i class="fa fa-download"></i> Download
-                </a>
-            </div>
-            <div class="Explosion">
-                <video class="Explosion-video" src="green screen/boom3.mp4" muted></video>
-                <div class="Explosion-text">Preview</div>
-                <a class="download-button" href="https://drive.google.com/uc?export=download&id=1N2PW7kn00H5YptbVteyqWMZGrk2Xnf-q" download>
-                    <i class="fa fa-download"></i> Download
-                </a>
-            </div>
-            <div class="Explosion">
-                <video class="Explosion-video" src="green screen/nuclear1.mp4" muted></video>
-                <div class="Explosion-text">Preview</div>
-                <a class="download-button" href="https://drive.google.com/uc?export=download&id=1OsskoYLcd-Ageu6pZ4TBebxIiYJlt4tV" download>
-                    <i class="fa fa-download"></i> Download
+            <div class="pack">
+                <img src="images/meteor-preview.jpg" alt="Meteor Strike Effects Pack Preview">
+                <p>Meteor Strike Effects Pack</p>
+                <a href="https://drive.google.com/uc?export=download&id=1xqwXC8Snw3Kh9GjvNUP3AmqB1Rvi08Tf" download>
+                    <i class="fa fa-download"></i> Download Pack
                 </a>
             </div>
         </div>
     </section>
-    <section id="meteor-strikes" class="section-content">
-        <h2>Meteor Strike Effects</h2>
-        <div class="meteor-container">
-            <div class="meteor">
-                <video class="meteor-video" src="green screen/meteor1.mp4" muted></video>
-                <div class="meteor-text">Preview</div>
-                <a class="download-button" href="https://drive.google.com/uc?export=download&id=1xqwXC8Snw3Kh9GjvNUP3AmqB1Rvi08Tf" download>
-                    <i class="fa fa-download"></i> Download
-                </a>
-            </div>
-            <div class="meteor">
-                <video class="meteor-video" src="green screen/meteor2.mp4" muted></video>
-                <div class="meteor-text">Preview</div>
-                <a class="download-button" href="https://drive.google.com/uc?export=download&id=18wgMJ8lvv15XLmcNMVyDpsw-7CQsTmB-" download>
-                    <i class="fa fa-download"></i> Download
-                </a>
-            </div>
-        </div>
-    </section>
+
     <footer>
         <p>&copy; 2024 Raykoww FX. All rights reserved.</p>
     </footer>
+
     <script>
-        document.querySelectorAll('.Explosion').forEach(Explosion => {
-            const video = Explosion.querySelector('.Explosion-video');
-            Explosion.addEventListener('mouseover', () => {
-                video.play();
-            });
-            Explosion.addEventListener('mouseout', () => {
-                video.pause();
-                video.currentTime = 0;
-            });
-        });
-        document.querySelectorAll('.meteor').forEach(meteor => {
-            const video = meteor.querySelector('.meteor-video');
-            meteor.addEventListener('mouseover', () => {
-                video.play();
-            });
-            meteor.addEventListener('mouseout', () => {
-                video.pause();
-                video.currentTime = 0;
-            });
-        });
+        // You can add JavaScript here if needed for interactivity.
     </script>
 </body>
 </html>

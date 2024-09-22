@@ -15,6 +15,7 @@
             background-color: #121212;
             color: #fff;
             text-align: center;
+            overflow-x: hidden;
             scrollbar-color: #8f5cf4 #1a1a1a; /* Firefox */
             scrollbar-width: thin; /* Firefox */
         }
@@ -95,11 +96,15 @@
         .hero {
             padding: 100px 20px;
             background-color: #1a1a1a;
-            background-image: url('images/images-bg.jpg'); /* Replace with a relevant background image */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/images-bg.jpg'); /* Add a semi-transparent overlay */
             background-size: cover;
             background-position: center;
             position: relative;
             overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
         .hero h1 {
@@ -113,18 +118,25 @@
             font-size: 20px;
             color: #ddd;
             margin-top: 20px;
+            max-width: 800px;
         }
 
         .hero .free-info {
             font-size: 18px;
             color: #fff;
-            background: #8f5cf4;
-            padding: 10px 20px;
+            background: linear-gradient(90deg, #8f5cf4, #a460f4);
+            padding: 12px 25px;
             border-radius: 5px;
             display: inline-block;
             margin-top: 20px;
             font-weight: bold;
             box-shadow: 0 0 8px rgba(143, 92, 244, 0.7);
+            transition: transform 0.3s;
+        }
+
+        .hero .free-info:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 12px rgba(143, 92, 244, 0.9);
         }
 
         /* Why to Use Section */
@@ -145,16 +157,16 @@
             color: #ddd;
             line-height: 1.6;
             margin-bottom: 20px;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         /* Footer */
         footer {
-            background-color: #2b2b2b;
+            background-color: #1a1a1a;
             padding: 15px 0;
-            margin-top: 50px;
             color: #8f8f8f;
             font-size: 14px;
-            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
         }
 
         /* Animations */
@@ -165,6 +177,25 @@
 
             to {
                 opacity: 1;
+            }
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .why-use h2 {
+                font-size: 28px;
+            }
+
+            .why-use p {
+                font-size: 16px;
             }
         }
     </style>
@@ -178,7 +209,6 @@
             <li><a href="green-screen.html">Green Screen</a></li>
             <li><a href="stock-videos.html">Stock Videos</a></li>
             <li><a href="overlays.html">Overlays</a></li>
-            <li><a href="images.html">Images</a></li>
             <li><a href="sound-fx.html">Sound FX</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>

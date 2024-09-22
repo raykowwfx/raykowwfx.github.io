@@ -102,257 +102,58 @@
             color: #8f5cf4;
             margin-bottom: 30px;
         }
-        .overlay-container {
+        .pack-container {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
+            gap: 20px;
         }
-        .overlay {
-            margin: 20px;
+        .pack {
             background-color: #1a1a1a;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 20px rgba(143, 92, 244, 0.8);
             transition: transform 0.3s, box-shadow 0.3s;
             width: 300px;
-        }
-        .overlay:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 40px rgba(143, 92, 244, 1);
-        }
-        .overlay img {
-            width: 100%;
-            border-radius: 10px;
-            margin-bottom: 15px;
-        }
-        .overlay p {
-            margin-bottom: 15px;
-            font-size: 18px;
-        }
-        .overlay a {
-            display: inline-block;
-            text-decoration: none;
-            color: #8f5cf4;
-            font-size: 16px;
-            transition: color 0.3s;
-            background-color: #1a1a1a;
-            border: 2px solid #8f5cf4;
-            padding: 10px 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(143, 92, 244, 0.8);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .overlay a:hover {
-            color: #fff;
-            background-color: #8f5cf4;
-            border-color: #7e4dcf;
-            box-shadow: 0 0 20px rgba(143, 92, 244, 1);
-        }
-        .overlay a .fa {
-            margin-right: 8px;
-        }
-        .shockwave-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
-        .shockwave {
             position: relative;
-            width: 300px;
-            height: 300px;
-            background-color: #000;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 0 20px rgba(143, 92, 244, 0.8);
-            transition: transform 0.3s;
         }
-        .shockwave:hover {
+        .pack:hover {
             transform: scale(1.05);
             box-shadow: 0 0 40px rgba(143, 92, 244, 1);
         }
-        .shockwave-video {
+        .pack img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
         }
-        .shockwave-text {
-            position: absolute;
-            bottom: 80px;
-            left: 50%;
-            transform: translateX(-50%);
+        .pack h3 {
+            font-size: 24px;
             color: #8f5cf4;
-            font-size: 28px;
-            background: rgba(0, 0, 0, 0.6);
-            padding: 10px 15px;
-            border-radius: 5px;
-            text-shadow: 0 0 10px rgba(143, 92, 244, 0.8);
-            transition: opacity 0.3s;
+            margin-bottom: 10px;
         }
-        .shockwave:hover .shockwave-text {
-            opacity: 1;
+        .pack p {
+            font-size: 16px;
+            margin-bottom: 15px;
         }
         .download-button {
-            position: absolute;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: inline-block;
             background-color: #8f5cf4;
             color: #fff;
-            padding: 10px 20px;
+            padding: 12px 24px;
             border-radius: 5px;
             text-decoration: none;
             font-size: 16px;
-            transition: background-color 0.3s, box-shadow 0.3s;
+            transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
             box-shadow: 0 0 10px rgba(143, 92, 244, 0.8);
         }
         .download-button:hover {
             background-color: #7e4dcf;
             box-shadow: 0 0 20px rgba(143, 92, 244, 1);
+            transform: translateY(-2px);
         }
-        .download-button .fa {
-            margin-right: 8px;
-        }
-        .particles-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
-        .particles {
-            position: relative;
-            width: 300px;
-            height: 300px;
-            background-color: #000;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 0 20px rgba(143, 92, 244, 0.8);
-            transition: transform 0.3s;
-        }
-        .particles:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 40px rgba(143, 92, 244, 1);
-        }
-        .particles-video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .particles-text {
-            position: absolute;
-            bottom: 80px;
-            left: 50%;
-            transform: translateX(-50%);
-            color: #8f5cf4;
-            font-size: 28px;
-            background: rgba(0, 0, 0, 0.6);
-            padding: 10px 15px;
-            border-radius: 5px;
-            text-shadow: 0 0 10px rgba(143, 92, 244, 0.8);
-            transition: opacity 0.3s;
-        }
-        .particles:hover .particles-text {
-            opacity: 1;
-        }
-        .smoke-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
-        .smoke {
-            position: relative;
-            width: 500px;
-            height: 300px;
-            background-color: #000;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 0 20px rgba(143, 92, 244, 0.8);
-            transition: transform 0.3s;
-        }
-        .smoke:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 40px rgba(143, 92, 244, 1);
-        }
-        .smoke-video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .smoke-text {
-            position: absolute;
-            bottom: 80px;
-            left: 50%;
-            transform: translateX(-50%);
-            color: #8f5cf4;
-            font-size: 28px;
-            background: rgba(0, 0, 0, 0.6);
-            padding: 10px 15px;
-            border-radius: 5px;
-            text-shadow: 0 0 10px rgba(143, 92, 244, 0.8);
-            transition: opacity 0.3s;
-        }
-        .smoke:hover .smoke-text {
-            opacity: 1;
-        }
-
-        .lightning-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.lightning {
-    position: relative;
-    width: 500px;
-    height: 300px;
-    background-color: #000;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 0 20px rgba(143, 92, 244, 0.8);
-    transition: transform 0.3s;
-}
-
-.lightning:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 40px rgba(143, 92, 244, 1);
-}
-
-.lightning-video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.lightning-text {
-    position: absolute;
-    bottom: 80px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: #8f5cf4;
-    font-size: 28px;
-    background: rgba(0, 0, 0, 0.6);
-    padding: 10px 15px;
-    border-radius: 5px;
-    text-shadow: 0 0 10px rgba(143, 92, 244, 0.8);
-    transition: opacity 0.3s;
-}
-
-.lightning:hover .lightning-text {
-    opacity: 1;
-}
-
-
         footer {
-            background-color: #2b2b2b;
+            background-color: #1a1a1a;
             padding: 15px 0;
-            margin-top: 50px;
             color: #8f8f8f;
             font-size: 14px;
         }
@@ -370,318 +171,63 @@
             <li><a href="green-screen.html">Green Screen</a></li>
             <li><a href="stock-videos.html">Stock Videos</a></li>
             <li><a href="overlays.html" class="active">Overlays</a></li>
-            <li><a href="images.html">Images</a></li>
             <li><a href="sound-fx.html">Sound FX</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
+
     <section id="home" class="hero">
         <h1>Overlays</h1>
         <p>Explore and download our collection of high-quality overlays for your projects!</p>
     </section>
-    <section id="shockwaves" class="section-content">
-        <h2>Shockwave Effects</h2>
-        <div class="shockwave-container">
-            <div class="shockwave">
-                <video class="shockwave-video" src="videos/Shockwave_26.mp4" muted></video>
-                <div class="shockwave-text">Preview</div>
-                <a class="download-button" href="https://drive.google.com/uc?export=download&id=1FKHZDFpx3V8EuIru0Z3cObKU1sYGvp_I" download>
-                    <i class="fa fa-download"></i> Download
+
+    <section id="overlay-packs" class="section-content">
+        <h2>Download Overlay Packs</h2>
+        <div class="pack-container">
+            <!-- Pack 1 -->
+            <div class="pack">
+                <img src="images/shockwave-preview.jpg" alt="Shockwave Pack Preview">
+                <h3>Shockwave Pack</h3>
+                <p>This pack contains a collection of shockwave effects for your projects.</p>
+                <a class="download-button" href="https://drive.google.com/uc?export=download&id=PACK_ID_1" download>
+                    <i class="fa fa-download"></i> Download Shockwave Pack
                 </a>
             </div>
-            <div class="shockwave">
-                <video class="shockwave-video" src="videos/Shockwave_27.mp4" muted></video>
-                <div class="shockwave-text">Preview</div>
-                <a class="download-button" href="https://drive.google.com/uc?export=download&id=1tA46bCNrqRnjsi0CZf_DG4aE1GgM3VP2" download>
-                    <i class="fa fa-download"></i> Download
+
+            <!-- Pack 2 -->
+            <div class="pack">
+                <img src="images/particles-preview.jpg" alt="Particles Pack Preview">
+                <h3>Particles Pack</h3>
+                <p>This pack includes neon and triangle particle effects.</p>
+                <a class="download-button" href="https://drive.google.com/uc?export=download&id=PACK_ID_2" download>
+                    <i class="fa fa-download"></i> Download Particles Pack
                 </a>
             </div>
-            <div class="shockwave">
-                <video class="shockwave-video" src="videos/Shockwave_01.mp4" muted></video>
-                <div class="shockwave-text">Preview</div>
-                <a class="download-button" href="https://drive.google.com/uc?export=download&id=1ws2GxxjM3mcAu_NdyJDwv2DjOm7aztqq" download>
-                    <i class="fa fa-download"></i> Download
+
+            <!-- Pack 3 -->
+            <div class="pack">
+                <img src="images/smoke-preview.jpg" alt="Smoke Pack Preview">
+                <h3>Smoke Pack</h3>
+                <p>Get a variety of smoke overlay effects in this pack.</p>
+                <a class="download-button" href="https://drive.google.com/uc?export=download&id=PACK_ID_3" download>
+                    <i class="fa fa-download"></i> Download Smoke Pack
                 </a>
             </div>
-            <div class="shockwave">
-                <video class="shockwave-video" src="videos/Shockwave_02.mp4" muted></video>
-                <div class="shockwave-text">Preview</div>
-                <a class="download-button" href="https://drive.google.com/uc?export=download&id=1tYZOGpJka81kpeos8GCnea1icdNS_mFd" download>
-                    <i class="fa fa-download"></i> Download
-                </a>
-            </div>
-            <div class="shockwave">
-                <video class="shockwave-video" src="videos/Shockwave_03.mp4" muted></video>
-                <div class="shockwave-text">Preview</div>
-                <a class="download-button" href="https://drive.google.com/uc?export=download&id=11UwHrYtF-1D7kzhqb7Z4jVv3TJmuLFpc" download>
-                    <i class="fa fa-download"></i> Download
-                </a>
-            </div>
-            <div class="shockwave">
-                <video class="shockwave-video" src="videos/Shockwave_04.mp4" muted></video>
-                <div class="shockwave-text">Preview</div>
-                <a class="download-button" href="https://drive.google.com/uc?export=download&id=1hT07qm4Vl1Q16j9IyHdfCE5cgg66oA3-" download>
-                    <i class="fa fa-download"></i> Download
-                </a>
-            </div>
-            <div class="shockwave">
-                <video class="shockwave-video" src="videos/Shockwave_05.mp4" muted></video>
-                <div class="shockwave-text">Preview</div>
-                <a class="download-button" href="https://drive.google.com/uc?export=download&id=1B5rkSekexMO-ZtsI9iS9NcXpK7AxYhg4" download>
-                    <i class="fa fa-download"></i> Download
-                </a>
-            </div>
-            <div class="shockwave">
-                <video class="shockwave-video" src="videos/Shockwave_06.mp4" muted></video>
-                <div class="shockwave-text">Preview</div>
-                <a class="download-button" href="https://drive.google.com/uc?export=download&id=1IF_vzPhNBuuGDinAtfbffeIYaUkeEIIO" download>
-                    <i class="fa fa-download"></i> Download
-                </a>
-            </div>
-            <div class="shockwave">
-                <video class="shockwave-video" src="videos/Shockwave_07.mp4" muted></video>
-                <div class="shockwave-text">Preview</div>
-                <a class="download-button" href="https://drive.google.com/uc?export=download&id=148vBFFhHKmpEOxvIMY1bBowJAayNATzv" download>
-                    <i class="fa fa-download"></i> Download
-                </a>
-            </div>
-            <div class="shockwave">
-                <video class="shockwave-video" src="videos/Shockwave_08.mp4" muted></video>
-                <div class="shockwave-text">Preview</div>
-                <a class="download-button" href="https://drive.google.com/uc?export=download&id=1GdpdDiIzs87eyDwcBeEX556LR-jeHda4" download>
-                    <i class="fa fa-download"></i> Download
-                </a>
-            </div>
-            <div class="shockwave">
-                <video class="shockwave-video" src="videos/Shockwave_09.mp4" muted></video>
-                <div class="shockwave-text">Preview</div>
-                <a class="download-button" href="https://drive.google.com/uc?export=download&id=1UbQiUL9bA48Mtu2CQuHKzYdHqEJLpFTu" download>
-                    <i class="fa fa-download"></i> Download
-                </a>
-            </div>
-            <div class="shockwave">
-                <video class="shockwave-video" src="videos/Shockwave_10.mp4" muted></video>
-                <div class="shockwave-text">Preview</div>
-                <a class="download-button" href="https://drive.google.com/uc?export=download&id=1gKX_JQwS_4UNfXA2r-IMoi9gzizyGjL8" download>
-                    <i class="fa fa-download"></i> Download
-                </a>
-            </div>
-            <div class="shockwave">
-                <video class="shockwave-video" src="videos/Shockwave_11.mp4" muted></video>
-                <div class="shockwave-text">Preview</div>
-                <a class="download-button" href="https://drive.google.com/uc?export=download&id=1Z-2aSMXp7OCheX1P-PWQB8Nt-1TG-Zzb" download>
-                    <i class="fa fa-download"></i> Download
-                </a>
-            </div>
-            <div class="shockwave">
-                <video class="shockwave-video" src="videos/Shockwave_12.mp4" muted></video>
-                <div class="shockwave-text">Preview</div>
-                <a class="download-button" href="https://drive.google.com/uc?export=download&id=1i6idSvWIWSO-_GLXKHZ4CGvuw59V30Eq" download>
-                    <i class="fa fa-download"></i> Download
-                </a>
-            </div>
-            <div class="shockwave">
-                <video class="shockwave-video" src="videos/Shockwave_13.mp4" muted></video>
-                <div class="shockwave-text">Preview</div>
-                <a class="download-button" href="https://drive.google.com/uc?export=download&id=1XJUqzUc6ZVv-8XUWnre0735dO0bWI7Gt" download>
-                    <i class="fa fa-download"></i> Download
-                </a>
-            </div>
-            <div class="shockwave">
-                <video class="shockwave-video" src="videos/Shockwave_14.mp4" muted></video>
-                <div class="shockwave-text">Preview</div>
-                <a class="download-button" href="https://drive.google.com/uc?export=download&id=1ga8A7k22fzSgDUnw2eHPejwYIbTNRixE" download>
-                    <i class="fa fa-download"></i> Download
-                </a>
-            </div>
-            <div class="shockwave">
-                <video class="shockwave-video" src="videos/Shockwave_15.mp4" muted></video>
-                <div class="shockwave-text">Preview</div>
-                <a class="download-button" href="https://drive.google.com/uc?export=download&id=1dgKiPHlxgkoAm8IwIVbNNKNVK4CZPY8e" download>
-                    <i class="fa fa-download"></i> Download
-                </a>
-            </div>
-            <div class="shockwave">
-                <video class="shockwave-video" src="videos/Shockwave_16.mp4" muted></video>
-                <div class="shockwave-text">Preview</div>
-                <a class="download-button" href="https://drive.google.com/uc?export=download&id=1vxAQ6v4qw7ZaCfic_wIUKn_R6yBZjq4N" download>
-                    <i class="fa fa-download"></i> Download
-                </a>
-            </div>
-            <div class="shockwave">
-                <video class="shockwave-video" src="videos/Shockwave_17.mp4" muted></video>
-                <div class="shockwave-text">Preview</div>
-                <a class="download-button" href="https://drive.google.com/uc?export=download&id=1F6YHJcv-Ft4-ru2Sb1nDDFG_pa2tvnQO" download>
-                    <i class="fa fa-download"></i> Download
-                </a>
-            </div>
-            <div class="shockwave">
-                <video class="shockwave-video" src="videos/Shockwave_18.mp4" muted></video>
-                <div class="shockwave-text">Preview</div>
-                <a class="download-button" href="https://drive.google.com/uc?export=download&id=1BFGr3ig__aVFNyduJF8Okem7AgFVLr7t" download>
-                    <i class="fa fa-download"></i> Download
-                </a>
-            </div>
-            <div class="shockwave">
-                <video class="shockwave-video" src="videos/Shockwave_19.mp4" muted></video>
-                <div class="shockwave-text">Preview</div>
-                <a class="download-button" href="https://drive.google.com/uc?export=download&id=1CvC8C-uh7KoCN47S0EkBhgqvoNXt2VAn" download>
-                    <i class="fa fa-download"></i> Download
-                </a>
-            </div>
-            <div class="shockwave">
-                <video class="shockwave-video" src="videos/Shockwave_20.mp4" muted></video>
-                <div class="shockwave-text">Preview</div>
-                <a class="download-button" href="https://drive.google.com/uc?export=download&id=173RMyCZuxTIXGeMlAPFRDJ26oxOyumlV" download>
-                    <i class="fa fa-download"></i> Download
-                </a>
-            </div>
-            <div class="shockwave">
-                <video class="shockwave-video" src="videos/Shockwave_21.mp4" muted></video>
-                <div class="shockwave-text">Preview</div>
-                <a class="download-button" href="https://drive.google.com/uc?export=download&id=1OkIiRgsTtv8zmn142uTC_2BdriuyHZKQ" download>
-                    <i class="fa fa-download"></i> Download
-                </a>
-            </div>
-            <div class="shockwave">
-                <video class="shockwave-video" src="videos/Shockwave_22.mp4" muted></video>
-                <div class="shockwave-text">Preview</div>
-                <a class="download-button" href="https://drive.google.com/uc?export=download&id=1yd_Xd0k8PFWlUEkymwCodWfIvaRRcsTa" download>
-                    <i class="fa fa-download"></i> Download
-                </a>
-            </div>
-            <div class="shockwave">
-                <video class="shockwave-video" src="videos/Shockwave_23.mp4" muted></video>
-                <div class="shockwave-text">Preview</div>
-                <a class="download-button" href="https://drive.google.com/uc?export=download&id=10nn5Fdf3aoetbwTvCx8DwoRObb1-8Rh-" download>
-                    <i class="fa fa-download"></i> Download
-                </a>
-            </div>
-            <div class="shockwave">
-                <video class="shockwave-video" src="videos/Shockwave_24.mp4" muted></video>
-                <div class="shockwave-text">Preview</div>
-                <a class="download-button" href="https://drive.google.com/uc?export=download&id=1q8kDp3NwNQcKtF0A8wdV_tqMfC1RyjxO" download>
-                    <i class="fa fa-download"></i> Download
-                </a>
-            </div>
-            <div class="shockwave">
-                <video class="shockwave-video" src="videos/Shockwave_25.mp4" muted></video>
-                <div class="shockwave-text">Preview</div>
-                <a class="download-button" href="https://drive.google.com/uc?export=download&id=1_J2i-HBxg5UxJc40gQmiYwB7sNt0CL60" download>
-                    <i class="fa fa-download"></i> Download
+
+            <!-- Pack 4 -->
+            <div class="pack">
+                <img src="images/lightning-preview.jpg" alt="Lightning Pack Preview">
+                <h3>Lightning Pack</h3>
+                <p>This pack features various lightning strike effects.</p>
+                <a class="download-button" href="https://drive.google.com/uc?export=download&id=PACK_ID_4" download>
+                    <i class="fa fa-download"></i> Download Lightning Pack
                 </a>
             </div>
         </div>
     </section>
-    <section id="particles" class="section-content">
-        <h2>Particles Effects</h2>
-        <div class="particles-container">
-            <div class="particles">
-                <video class="particles-video" src="videos/Neon Particles (1).mp4" muted></video>
-                <div class="particles-text">Preview</div>
-                <a class="download-button" href="https://drive.google.com/uc?export=download&id=1f7v4sAL5O82mqXH952iY519vnv1YP7Ov" download>
-                    <i class="fa fa-download"></i> Download
-                </a>
-            </div>
-            <div class="particles">
-                <video class="particles-video" src="videos/TriangleParticles_01.mp4" muted></video>
-                <div class="particles-text">Preview</div>
-                <a class="download-button" href="https://drive.google.com/uc?export=download&id=1KmWk1LGNqR1DXYOL-SLm2uiFzfiRpdD8" download>
-                    <i class="fa fa-download"></i> Download
-                </a>
-            </div>
-            <div class="particles">
-                <video class="particles-video" src="videos/TriangleParticles_02.mp4" muted></video>
-                <div class="particles-text">Preview</div>
-                <a class="download-button" href="https://drive.google.com/uc?export=download&id=15929xFlWaqzSOibUKmleykFIAybJ8cZ6" download>
-                    <i class="fa fa-download"></i> Download
-                </a>
-            </div>
-        </div>
-    </section>
-    <section id="smokes" class="section-content">
-        <h2>Smoke Effects</h2>
-        <div class="smoke-container">
-            <div class="smoke">
-                <video class="smoke-video" src="videos/SMOKE_BURNOUT_OVERLAY.mp4" muted></video>
-                <div class="smoke-text">Preview</div>
-                <a class="download-button" href="https://drive.google.com/uc?export=download&id=15LTl4uNB2VsZjb25z17kDF2yipt1kGYJ" download>
-                    <i class="fa fa-download"></i> Download
-                </a>
-            </div>
-            <div class="smoke">
-                <video class="smoke-video" src="videos/Smoke_02.mp4" muted></video>
-                <div class="smoke-text">Preview</div>
-                <a class="download-button" href="https://drive.google.com/uc?export=download&id=example_id_2" download>
-                    <i class="fa fa-download"></i> Download
-                </a>
-            </div>
-        </div>
-    </section>
-    <section id="lightning-strike" class="section-content">
-        <h2>Lightning Strike Effects</h2>
-        <div class="lightning-container">
-            <div class="lightning">
-                <video class="lightning-video" src="videos/Lightning_Strike (1).mp4" muted></video>
-                <div class="lightning-text">Preview</div>
-                <a class="download-button" href="https://drive.google.com/uc?export=download&id=10ph_XsuUy8tf6guAj1gvjndDqx-p5eq6" download>
-                    <i class="fa fa-download"></i> Download
-                </a>
-            </div>
-            <div class="lightning">
-                <video class="lightning-video" src="videos/Lightning_Strike (2).mp4" muted></video>
-                <div class="lightning-text">Preview</div>
-                <a class="download-button" href="https://drive.google.com/uc?export=download&id=1uqWBBibFR9JyJiXc-OVNAy960XHIkpmL" download>
-                    <i class="fa fa-download"></i> Download
-                </a>
-            </div>
-            <div class="lightning">
-                <video class="lightning-video" src="videos/Lightning_Strike (3).mp4" muted></video>
-                <div class="lightning-text">Preview</div>
-                <a class="download-button" href="https://drive.google.com/uc?export=download&id=1IjbxTrxNMbM91pcTD7w8pRuUobSgjeAS" download>
-                    <i class="fa fa-download"></i> Download
-                </a>
-            </div>
-            <div class="lightning">
-                <video class="lightning-video" src="videos/Lightning_Strike (4).mp4" muted></video>
-                <div class="lightning-text">Preview</div>
-                <a class="download-button" href="https://drive.google.com/uc?export=download&id=1nB1P_Bru_H01DrjSNW-KUdvTN6agCKso" download>
-                    <i class="fa fa-download"></i> Download
-                </a>
-            </div>
-            <div class="lightning">
-                <video class="lightning-video" src="videos/Lightning_Strike (5).mp4" muted></video>
-                <div class="lightning-text">Preview</div>
-                <a class="download-button" href="https://drive.google.com/uc?export=download&id=1N-f58LmlljA25VVxUcVwnz0nUEixz_9Z" download>
-                    <i class="fa fa-download"></i> Download
-                </a>
-            </div>
-        </div>
-    </section>
+
     <footer>
         <p>&copy; 2024 Raykoww FX. All rights reserved.</p>
     </footer>
-    <script>
-        function setupVideoControl(selector, videoSelector) {
-            document.querySelectorAll(selector).forEach(element => {
-                const video = element.querySelector(videoSelector);
-    
-                element.addEventListener('mouseover', () => {
-                    video.play();
-                });
-    
-                element.addEventListener('mouseout', () => {
-                    video.pause();
-                    video.currentTime = 0;
-                });
-            });
-        }
-    
-        // Set up controls for different elements
-        setupVideoControl('.shockwave', '.shockwave-video');
-        setupVideoControl('.particles', '.particles-video');
-        setupVideoControl('.smoke', '.smoke-video');
-        setupVideoControl('.lightning', '.lightning-video');
-    </script>    
 </body>
 </html>
